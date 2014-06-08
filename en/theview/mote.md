@@ -39,5 +39,3 @@ Following the above example, the printed result will be:
 ```
 
 The next section shows how to integrate Mote with Cuba.
-
-> **NOTE:** Mote only has 33 lines of code.

@@ -17,4 +17,4 @@ prerequisites installed:
 * [Git](http://git-scm.com/), the version control system. You can follow the installation
   instructions at the [Installing Git section of Pro Git](http://www.git-scm.com/book/en/Getting-Started-Installing-Git).
 
-> **NOTE:** All the code examples have been tested on OSX and Linux only.
+> **NOTE:** All the code examples have been tested on OSX and Linux.
