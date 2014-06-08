@@ -1,13 +1,12 @@
 Antes de Empezar
 ================
 
-Este libro es para cualquier desarrollador que quiera comenzar a
+Este libro es para cualquier programador que quiera comenzar a
 desarrollar una aplicación Cuba desde cero, no importa si eres
-un programador experimentado o no. A través de los capítulos,
-nosotros construiremos un clon de Twitter.
+experimentado o no. A través de los capítulos,
+construiremos un clon de Twitter.
 
-Para probar los ejemplos del libro, necesitas tener algunos
-prerrequisitos instalados:
+Para probar los ejemplos del libro, necesitas previamente tener instalado:
 
 * Ruby 2.0 o superior. La última versión la puedes encontrar en la
   [página de descargas de Ruby](https://www.ruby-lang.org/en/downloads/).
@@ -19,4 +18,4 @@ prerrequisitos instalados:
   seguir las instrucciones de instalación que se encuentran en la sección
   de introdución de [Pro Git](http://www.git-scm.com/book/en/Getting-Started-Installing-Git).
 
-> **NOTA:** Todos los ejemplos de código han sido probados sólo en OSX y Linux.
+> **NOTA:** Todos los ejemplos de código han sido probados tanto en OSX como en Linux.

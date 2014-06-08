@@ -1,8 +1,8 @@
 Entendiendo el cógido
 =====================
 
-Ahora que sabemos cómo crear una mínima aplicación con Cuba, vamos a
-echar un vistazo más profundo a el código. Podemos dividir este pequeño
+Ahora que sabemos cómo crear una aplicación mínima con Cuba, vamos a
+echar un vistazo más profundo al código. Podemos dividir este pequeño
 ejemplo en tres partes:
 
 En primer lugar, usamos el método `require` para cargar el código de

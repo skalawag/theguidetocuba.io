@@ -30,12 +30,12 @@ run(Cuba)
 ![rackup](../assets/rackup.png)
 
 Ahora abre un navegador e ingresa a <http://localhost:9292/>. Deberá
-aparecer un mensaje de bienvenida como se muestra más abajo:
+aparecer un mensaje de bienvenida como el que se muestra más abajo:
 
 ![hello](../assets/hello.png)
 
-> **NOTA:** Para parar el servidor web, presiona `Ctrl+C` en la ventana
-en donde está corriendo. Para verificar que el servidor se haya detenido
+> **NOTA:** Para detener el servidor web, presiona `Ctrl+C` en la ventana
+donde está corriendo. Para verificar que el servidor se haya detenido
 debes ver el cursor de la línea de comandos nuevamente.
 
 Como puedes ver, la sintaxis es muy legible. Vamos a discutir todos
