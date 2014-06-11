@@ -11,7 +11,8 @@ First, we require the gems we'll use in this project.
 
 ```ruby
 require "cuba"
-require "cuba/mote"
+require "mote"
+require "mote/render"
 ...
 require "scrivener"
 ```
@@ -38,7 +39,7 @@ closer look later.
 ```ruby
 Ohm.redis = Redic.new(DATABASE_URL)
 
-Cuba.plugin(Cuba::Mote)
+Cuba.plugin(Mote::Render)
 Cuba.plugin(Shield::Helpers)
 
 ...
