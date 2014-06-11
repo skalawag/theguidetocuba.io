@@ -1,19 +1,19 @@
 Mote & Cuba
 ===========
 
-To use Mote in our application, we have to require the `cuba/mote` file
-and include the `Cuba::Mote` plugin that comes with it. If we look closely,
+To use Mote in our application, we have to require the `mote/render` file
+and include the `Mote::Render` plugin that comes with it. If we look closely,
 this has already been done in the `app.rb` file:
 
 ```ruby
 require "cuba"
-require "cuba/mote"
+require "mote"
+require "mote/render"
 
 ...
 
-Cuba.plugin(Cuba::Mote)
+Cuba.plugin(Mote::Render)
 ```
 
-The `Cuba::Mote` plugin is one of the useful extensions provided by the
-[cuba-contrib](https://github.com/cyx/cuba-contrib/) gem, one of the gems
-we installed in the section [Managing Dependencies](/en/setting_the_road/managing_dependencies.html).
+The `Mote::Render` plugin is provided by the [mote-render](https://github.com/frodsan/mote-render/)
+gem, one of the gems we installed in the section [Managing Dependencies](/en/setting_the_road/managing_dependencies.html).
