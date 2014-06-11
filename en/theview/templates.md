@@ -18,7 +18,7 @@ In our case it looks like this:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>App</title>
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
   </head>
