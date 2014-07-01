@@ -9,5 +9,5 @@ serie de herramientas que comparten la misma filosofía.
 Este libro es un trabajo en progreso. El contenido del mismo
 puede cambiar en el futuro.
 
-Todo el contenido está licensiado sobre la licencia
+Todo el contenido está publicado bajo licencia
 [Creative Commons Attribution Non Commercial Share Alike 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).
