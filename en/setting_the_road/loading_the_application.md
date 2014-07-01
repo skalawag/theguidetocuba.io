@@ -11,8 +11,8 @@ First, we require the gems we'll use in this project.
 
 ```ruby
 require "cuba"
+require "hache"
 require "mote"
-require "mote/render"
 ...
 require "scrivener"
 ```

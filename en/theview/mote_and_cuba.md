@@ -7,6 +7,7 @@ this has already been done in the `app.rb` file:
 
 ```ruby
 require "cuba"
+require "hache"
 require "mote"
 require "mote/render"
 
