@@ -66,12 +66,14 @@ later.
 ```
 cuba -v 3.1.1
 cutest -v 1.2.1
-ohm -v 2.0.0
+hache -v 1.1.0
+malone -v 1.0.6
 mote -v 1.1.2
 mote-render -v 1.0.0
-scrivener -v 0.2.0
+ohm -v 2.0.1
 rack-protection -v 1.5.3
 rack-test -v 0.6.2
+scrivener -v 0.2.0
 shield -v 2.1.0
 shotgun -v 0.9
 ```

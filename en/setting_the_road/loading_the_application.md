@@ -12,8 +12,9 @@ First, we require the gems we'll use in this project.
 ```ruby
 require "cuba"
 require "hache"
-require "mote"
+require "malone"
 ...
+require "rack/protection"
 require "scrivener"
 ```
 
@@ -26,6 +27,7 @@ directly into the code.
 APP_KEY = ENV.fetch("APP_KEY")
 APP_SECRET = ENV.fetch("APP_SECRET")
 DATABASE_URL = ENV.fetch("DATABASE_URL")
+MAIL_URL = ENV.fetch("MAIL_URL")
 ```
 
 To load these values into our environment, we read them from the *.env*
@@ -38,6 +40,7 @@ closer look later.
 
 ```ruby
 Ohm.redis = Redic.new(DATABASE_URL)
+Malone.connect(url: MAIL_URL)
 
 Cuba.plugin(Mote::Render)
 Cuba.plugin(Shield::Helpers)
