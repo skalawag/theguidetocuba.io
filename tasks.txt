@@ -8,3 +8,5 @@ Tasks
   find something better yet.
 
 - Update Introduction page. It needs to be better. Just better.
+
+- Update "Published with GitBook" logo. (https://github.com/GitbookIO/logos/blob/master/published-with-gitbook.png)
