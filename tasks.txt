@@ -1,0 +1,10 @@
+Tasks
+=====
+
+- Change the description of the book.
+
+  F: I think "Learn how to make Ruby web applications by following a minimalistic approach."
+  is not very marketable. I like this part "Learn how to make Ruby web application ...". I didn't
+  find something better yet.
+
+- Update Introduction page. It needs to be better. Just better.
