@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require "json"
+require "mote"
+require "redcarpet"
+
+class Site
+  include Mote::Helpers
+
+  def initialize(content)
+    @content = content
+  end
+
+  def generate
+    return mote("templates/page.mote", config.merge(content: markdown))
+  end
+
+  def config
+    return JSON.parse(File.read("book.json"))
+  end
+
+  def markdown
+    return Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@content)
+  end
+end
+
+puts(Site.new(File.read(ARGV[0])).generate)

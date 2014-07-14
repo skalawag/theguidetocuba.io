@@ -1,12 +1,7 @@
 {
-    "github": false,
+    "title": "The Guide to Cuba",
     "description": "Learn how to make Ruby web applications by following a minimalistic approach.",
-    "plugins": ["-mathjax"],
-
     "links": {
-        "custom": {
-            "Official Website": "http://theguidetocuba.io",
-            "Make a Donation": "https://www.gitbook.io/book/frodsan/theguidetocuba"
-        }
+        "Official Website": "http://theguidetocuba.io"
     }
 }
