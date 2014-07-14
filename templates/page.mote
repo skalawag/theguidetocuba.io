@@ -7,9 +7,15 @@
     <meta name="description" content="{{ description }}"/>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="/css/styles.css"/>
   </head>
   <body>
+    <header>
+      <a href="#" class="action pull-left"><i class="fa fa-bars"></i></a>
+      <a href="#" class="action pull-right"><i class="fa fa-gittip"></i></a>
+    </header>
+
     <section id="content">
       {{ content }}
     </section>
