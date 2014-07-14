@@ -15,3 +15,7 @@ body {
 #content a:hover, a:focus {
   text-decoration: underline;
 }
+
+#content img {
+  max-width: 100%;
+}
