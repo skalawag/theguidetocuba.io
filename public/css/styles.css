@@ -38,3 +38,14 @@ header {
 #content img {
   max-width: 100%;
 }
+
+#content ul {
+  padding-left: 1.5em;
+}
+
+#content blockquote {
+  border-left: 4px solid #DDD;
+  color: #777;
+  margin: 0;
+  padding: 0px 15px;
+}
