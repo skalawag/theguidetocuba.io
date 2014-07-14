@@ -20,7 +20,10 @@ class Site
   end
 
   def markdown
-    return Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@content)
+    options = { tables: true }
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+
+    return renderer.render(@content)
   end
 end
 
