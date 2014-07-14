@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
     <title>{{ title }}</title>
 
+    <meta charset="utf-8"/>
     <meta name="description" content="{{ description }}"/>
+
+    <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
     {{ content }}
