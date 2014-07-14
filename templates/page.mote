@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/css/styles.css"/>
   </head>
   <body>
-    <div id="content">
+    <section id="content">
       {{ content }}
-    </div>
+    </section>
   </body>
 </html>

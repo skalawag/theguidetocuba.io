@@ -6,3 +6,12 @@ body {
   line-height: 1.6em;
   padding: 5px 15px;
 }
+
+#content a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+#content a:hover, a:focus {
+  text-decoration: underline;
+}
