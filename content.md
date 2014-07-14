@@ -1,13 +1,34 @@
-Introduction
-============
+# The Guide to Cuba
 
-Learn how to make Ruby web applications by following a minimalistic
-approach. This book will teach you the basics of [Cuba](http://cuba.is/),
-the Ruby microframework, and a set of micro libraries.
+Francesco Rodríguez & Mayn Ektvedt Kjær
 
-This book is a work in progress. The content may change at any time.
+Version 0.1
 
-All content is licensed under the [Creative Commons Attribution Non Commercial Share Alike 4.0 license](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This book is a work in progresses and is licensed under the
+[Creative Commons Attribution Non Commercial Share Alike 4.0 license]
+(http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+## Introduction
+
+The Guide to Cuba will teach you how to create a Ruby web
+application from scratch using Cuba. Cuba is a micro framework
+written by Michel Martens ([@soveran](https://twitter.com/soveran)).
+It is open source, and you can have a look at the code
+[here](https://github.com/soveran/cuba).
+
+Some Ruby frameworks can be bloated and offer functionality you don't
+need. We'll teach you how to use Cuba together
+will small and simple Ruby libraries to customize your stack.
+By applying this minimalist philosophy you achieve more flexibility,
+less complexity and easier maintainable code.
+
+Here's a list of pages that uses Cuba for inspiration:
+
+- [AT&T’s M2X](https://m2x.att.com)
+- [Educabilia](http://educabilia.com)
+- [Open Redis](https://openredis.com)
+- [jobs.punchgirls.com](https://jobs.punchgirls.com)
+- [Redis homepage](http://redis.io)
 
 Assumptions
 ===========
