@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/highlight.css"/>
   </head>
   <body>
     <header>
@@ -19,5 +20,8 @@
     <section id="content">
       {{ content }}
     </section>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

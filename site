@@ -20,7 +20,7 @@ class Site
   end
 
   def markdown
-    options = { tables: true }
+    options = { tables: true, fenced_code_blocks: true }
     renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
 
     return renderer.render(@content)
