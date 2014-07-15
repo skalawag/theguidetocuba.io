@@ -10,11 +10,7 @@ code {
   padding: 1px 4px;
 }
 
-.no-highlight {
-  display: block;
-}
-
-.hljs {
+pre code {
   display: block;
   background: #F8F8F8;
   color: #333333;
@@ -37,7 +33,7 @@ code {
 .css .hljs-id,
 .css .hljs-class,
 .css .hljs-pseudo {
-  color: #c82829;
+  color: #008080;
 }
 
 .hljs-number,
@@ -60,7 +56,7 @@ code {
 .hljs-inheritance,
 .hljs-header,
 .ruby .hljs-symbol {
-  color: #718c00;
+  color: #4EAA63;
 }
 
 .css .hljs-hexcolor {
@@ -76,6 +72,6 @@ code {
 
 .hljs-keyword,
 .javascript .hljs-function {
-  color: #8959a8;
+  color: #0086B3;
 }
 
