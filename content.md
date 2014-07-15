@@ -112,12 +112,12 @@ run(Cuba)
 You already have a functional Cuba application! To see it in action, type
 `rackup config.ru` in the command line.
 
-![rackup](/images/rackup.png)
+![rackup](/img/book/rackup.png)
 
 Now open a browser and navigate to <http://localhost:9292/>. It should
 show a greeting message as shown below:
 
-![hello](/images/hello.png)
+![hello](/img/book/hello.png)
 
 > **NOTE:** To stop the web server, hit `Ctrl+C` in the terminal window
 where it's running. To verify the server has stopped you should see your
@@ -178,7 +178,7 @@ Rack deals with HTTP requests. It provides a minimal interface between web
 servers supporting Ruby and Ruby frameworks. Without Rack, Cuba would have
 to implement its own handler for each web server.
 
-![rack](/images/rack.png)
+![rack](/img/book/rack.png)
 
 You didn't notice yet but we already used Rack. We used `rackup`, one of
 the tools that comes with Rack, to run our **"Hello Cuba!"** application.
@@ -366,7 +366,7 @@ minimal application looks.
 To get it up and running, we need to create a file with some
 configurations. Go to the command line and type `make setup`.
 
-![setup](/images/setup.png)
+![setup](/img/book/setup.png)
 
 As you can see, this created a file called *.env*. For now, it's enough
 for you to know that this file contains sensitive configurations for the
@@ -374,7 +374,7 @@ application. We'll discuss this in more detail later.
 
 To see the application in action, type `make server` in the command line.
 
-![shotgun](/images/shotgun.png)
+![shotgun](/img/book/shotgun.png)
 
 Unlike before, we're now using *shotgun* instead of *rackup*. *Shotgun*
 is a gem that reloads the application for every request. That's great for
@@ -382,7 +382,7 @@ development because we don't need to restart the server every time that
 we change the application. Now navigate to <http://localhost:9393/>. You
 should see the Cuba welcome page.
 
-![home](/images/home.png)
+![home](/img/book/home.png)
 
 *Shotgun* uses a *config.ru* file just like *rackup*. Let's see what the
 *config.ru* file looks like in this template.
@@ -624,6 +624,6 @@ If you start your server and go to
 [localhost:9393](http://localhost:9393), you should see the following
 greeting:
 
-![hello](/images/hello2.png)
+![hello](/img/book/hello2.png)
 
 You changed the content of the home page!
