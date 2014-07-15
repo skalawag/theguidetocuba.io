@@ -1,112 +1,191 @@
+html {
+  height: 100%;
+}
+
 body {
-  background: #FFF6DF;
-  font-family: "Droid Sans", sans-serif;
+  height: 100%;
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 300;
 }
 
-header h1 {
-  font-size: 1.5em;
+section {
+  position: relative;
+  padding: 1em;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1, h2, h3  {
+  font-weight: 300;
   text-align: center;
 }
 
-#presentation {
-  border-top: 1px solid #CCC;
-}
-
-#about {
-  overflow: hidden;
-}
-
-#about img {
-  float: left;
-  margin-right: 1em;
-  height: 131px;
-  width: 100px;
-}
-
-#read {
-  margin-bottom: 2em;
-  text-align: center;
-}
-
-#read p {
-  margin-top: 0.5em;
-}
-
-.action {
-  background: #D32C36;
-  border-radius: 5px;
-  color: white;
-  padding: 0.5em 1em;
-  text-decoration: none;
+#cover {
+  height: 50%;
+  color: #666;
+  background: url("/img/cubancar.png") no-repeat 50% whitesmoke;
+  background-size: 60%;
 }
 
 #authors {
-  border-top: 1px solid #CCC;
+  position: absolute;
+  bottom: 20px;
+  left: 1em;
+  right: 1em;
+  font-size: 0.8em;
 }
 
 .author {
-  overflow: hidden;
-  margin-bottom: 1em;
+  color: #666;
 }
 
-.author img {
-  border: 3px solid white;
-  border-radius: 10px;
-  float: left;
-  margin-right: 1em;
-  height: 80px;
-  width: 80px;
+.author:hover {
+  color: #444;
 }
 
-.author h4, .author p {
-  margin: 0.3em;
+#gittip {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: lightgray;
+  font-size: 2em;
 }
 
-footer {
-  border-top: 1px solid #CCC;
-  font-size: 0.7em;
-  padding: 0.5em 0;
+#gittip:hover, #gittip:active {
+  color: #666;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+p a {
+  color: rgba(129, 46, 128, 1);
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.link-wrapper {
+  margin-top: 30px;
   text-align: center;
 }
 
-@media only screen and (min-width: 670px) {
-  body {
-    width: 670px;
-    margin: 0 auto;
-  }
+.button {
+  border-radius: 5px;
+  padding: 0.5em 1.2em;
+  color: white;
+  text-decoration: none;
+  background: rgba(129, 46, 128, 1);
+}
 
-  #about {
-    overflow: inherit;
-  }
+.button:hover {
+  text-decoration: none;
+}
 
-  #about img {
-    width: 200px;
-    height: 262px;
-  }
+.download {
+  display: block;
+  text-decoration: underline;
+  margin-top: 20px;
+  color: #666;
+}
 
-  #about p, #donate p {
-    margin-left: 16em;
-    margin-right: 1em;
-  }
-
-  #read {
-    display: block;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 54px;
   }
 
   #authors {
-    clear: both;
-    margin-top: 2.5em;
-    overflow: hidden;
+     font-size: 1.3em;
   }
 
-  .author {
+  p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+  }
+
+  .link-wrapper {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  #cover {
+    height: 80%;
+    background-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section {
     float: left;
-    width: 45%;
+    width: 50%;
+    height: 100%;
+    padding: 0;
   }
 
-  #maynkj {
-    float: right;
+  #cover, #introduction {
+    height: 100%;
+  }
+
+  #cover {
+    background-size: 90%;
+  }
+
+  h1 {
+    margin-top: 44px;
+  }
+
+  h2 {
+    margin-top: 80px;
+    font-size: 30px;
+  }
+
+  #gittip {
+    top: 44px;
+  }
+
+  #authors {
+    bottom: 44px;
+  }
+
+ p {
+    width: 85%;
+    font-size: 1.2em;
+  }
+
+  .link-wrapper {
+    margin-top: 50px;
+  }
+
+  .download {
+    margin-top: 15px;
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #cover {
+    background-size: 80%;
+  }
+
+  #authors {
+    bottom: 50px;
+    font-size: 1.5em;
+  }
+
+  #gittip {
+    top: 20px;
+  }
+
+  h2 {
+    margin-top: 150px;
   }
 }
