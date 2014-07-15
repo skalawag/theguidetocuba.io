@@ -1,2 +1,4 @@
-server:
-	ruby -run -e httpd . -p 4000
+publish:
+	git add -A .
+	git commit -m 'Updates'
+	git push origin gh-pages

@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>The Guide to Cuba</title>
+
+    <meta charset="utf-8"/>
+    <meta name="description" content="Learn how to make Ruby web applications by following a minimalistic approach."/>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/book.css"/>
+    <link rel="stylesheet" href="/css/highlight.css"/>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="action pull-left"><i class="fa fa-bars"></i></a>
+      <a href="#" class="action pull-right"><i class="fa fa-gittip"></i></a>
+    </header>
+
+    <section id="content">
+      <h1>The Guide to Cuba</h1>
+
+<p>Francesco Rodríguez &amp; Mayn Ektvedt Kjær</p>
+
+<p>Version 0.1</p>
+
+<p>This book is a work in progresses and is licensed under the
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution Non Commercial Share Alike 4.0 license</a>.</p>
+
+<h2>Introduction</h2>
+
+<p>The Guide to Cuba will teach you how to create a Ruby web
+application from scratch using Cuba. Cuba is a micro framework
+written by Michel Martens (<a href="https://twitter.com/soveran">@soveran</a>).
+It is open source, and you can have a look at the code
+<a href="https://github.com/soveran/cuba">here</a>.</p>
+
+<p>Some Ruby frameworks can be bloated and offer functionality you don&#39;t
+need. We&#39;ll teach you how to use Cuba together
+will small and simple Ruby libraries to customize your stack.
+By applying this minimalist philosophy you achieve more flexibility,
+less complexity and easier maintainable code.</p>
+
+<p>Here&#39;s a list of pages that uses Cuba for inspiration:</p>
+
+<ul>
+<li><a href="https://m2x.att.com">AT&amp;T’s M2X</a></li>
+<li><a href="http://educabilia.com">Educabilia</a></li>
+<li><a href="https://openredis.com">Open Redis</a></li>
+<li><a href="https://jobs.punchgirls.com">jobs.punchgirls.com</a></li>
+<li><a href="http://redis.io">Redis homepage</a></li>
+</ul>
+
+<h1>Assumptions</h1>
+
+<p>This book is intended for everyone who wants to get started with a Cuba
+application from scratch, whether you are an experienced programmer or
+not. By following this book, we&#39;ll build a Twitter clone from scratch.</p>
+
+<p>In order to try out the examples of the book, you need to have some
+prerequisites installed:</p>
+
+<ul>
+<li><p>Ruby 2.0 or newer. You can get the latest Ruby from the
+<a href="https://www.ruby-lang.org/en/downloads/">Ruby download page</a>.</p></li>
+<li><p>The <a href="http://redis.io">Redis</a> database. If you haven&#39;t yet installed Redis, you can
+follow the instructions in the <a href="http://redis.io/download">Redis download page</a>.</p></li>
+<li><p><a href="http://git-scm.com/">Git</a>, the version control system. You can follow the installation
+instructions at the <a href="http://www.git-scm.com/book/en/Getting-Started-Installing-Git">Installing Git section of Pro Git</a>.</p></li>
+</ul>
+
+<blockquote>
+<p><strong>NOTE:</strong> All the code examples have been tested on OSX and Linux.</p>
+</blockquote>
+
+<h1>Welcome Aboard</h1>
+
+<p>This first chapter focuses on the bare minimum you need to know to work
+with Cuba. We&#39;ll learn some of the core concepts walking through the
+creation of a simple application. After reading this, you will know:</p>
+
+<ul>
+<li>How to install Cuba.</li>
+<li>Create a <strong>&quot;Hello world!&quot;</strong> application.</li>
+<li>The basic principles behind Cuba.</li>
+<li>The basics of Rack.</li>
+</ul>
+
+<h2>What&#39;s Cuba?</h2>
+
+<p>To begin, let&#39;s take a moment to answer <em>&quot;what is Cuba?&quot;</em>.</p>
+
+<p>Cuba is a web application micro-framework written in Ruby by
+<a href="https://github.com/soveran">Michel Martens</a>. It rides on
+<a href="http://rack.github.io">Rack</a> so we have the benefits of middleware,
+Rack libraries, and a variety of web servers for free.</p>
+
+<p>Cuba is minimalist by design (203 lines of code) which makes it
+<a href="https://github.com/luislavena/bench-micro#requestssec">faster</a>
+compared to other web frameworks. Also, it doesn’t make assumptions
+about the &quot;best&quot; way to do things. That gives us the freedom to choose
+the proper tools for the job.</p>
+
+<p>Since Cuba doesn’t ship with all the tools we need to create our example
+application, this book will also introduce other libraries that share the
+same design philosophy. Together, they make web development simple,
+understandable and fun.</p>
+
+<h2>Hello Cuba!</h2>
+
+<p>Before getting started, we have to install Cuba. Use the <code>gem</code> command:</p>
+
+<pre><code class="no-highlight">$ gem install cuba
+</code></pre>
+
+<p>Now that Cuba is installed, it&#39;s easy to create a Cuba application. Open
+your text editor of preference and create a file called <code>config.ru</code> with
+the following code:</p>
+
+<pre><code class="ruby">require &quot;cuba&quot;
+
+Cuba.define do
+  on root do
+    res.write(&quot;Hello, Cuba!&quot;)
+  end
+end
+
+run(Cuba)
+</code></pre>
+
+<p>You already have a functional Cuba application! To see it in action, type
+<code>rackup config.ru</code> in the command line.</p>
+
+<p><img src="/img/book/rackup.png" alt="rackup"></p>
+
+<p>Now open a browser and navigate to <a href="http://localhost:9292/">http://localhost:9292/</a>. It should
+show a greeting message as shown below:</p>
+
+<p><img src="/img/book/hello.png" alt="hello"></p>
+
+<blockquote>
+<p><strong>NOTE:</strong> To stop the web server, hit <code>Ctrl+C</code> in the terminal window
+where it&#39;s running. To verify the server has stopped you should see your
+command prompt cursor again.</p>
+</blockquote>
+
+<p>As you can see, the syntax is very readable. We&#39;ll discuss the details
+in the next section.</p>
+
+<h2>Breaking Down the Syntax</h2>
+
+<p>Now that we know how to build a minimal Cuba application, let&#39;s take a deeper
+look at the syntax. We can split this example into three parts:</p>
+
+<p>First, we require Cuba to load the gem and get access to
+its functionality.</p>
+
+<pre><code class="ruby">require &quot;cuba&quot;
+</code></pre>
+
+<p>Then we can identify four methods that appear in most Cuba
+applications: <code>define</code>, <code>on</code>, <code>root</code> and <code>res</code>.</p>
+
+<pre><code class="ruby">Cuba.define do
+  on root do
+    res.write(&quot;Hello, Cuba!&quot;)
+  end
+end
+</code></pre>
+
+<ul>
+<li><p><code>define</code> allows us to create an application through a block.</p></li>
+<li><p><code>on</code> executes a given block if the passed conditions evaluate to <code>true</code>.</p></li>
+<li><p><code>root</code> returns <code>true</code> if the accessed path is the root of the
+application (<code>&quot;/&quot;</code> or <code>&quot;&quot;</code>).</p></li>
+<li><p><code>res</code> handles the server response. In this case, we use the <code>write</code>
+method to set the response body with the greeting message.</p></li>
+</ul>
+
+<p>Finally, the last line connects our application with Rack.</p>
+
+<pre><code class="ruby">run(Cuba)
+</code></pre>
+
+<p>Don&#39;t worry if you don&#39;t understand what Rack is just yet, we&#39;ll discuss
+it in the next section.</p>
+
+<h2>Rack &amp; Roll!</h2>
+
+<p>As we mentioned earlier, Cuba is built on top of Rack ... but what is Rack?</p>
+
+<p>Rack deals with HTTP requests. It provides a minimal interface between web
+servers supporting Ruby and Ruby frameworks. Without Rack, Cuba would have
+to implement its own handler for each web server.</p>
+
+<p><img src="/img/book/rack.png" alt="rack"></p>
+
+<p>You didn&#39;t notice yet but we already used Rack. We used <code>rackup</code>, one of
+the tools that comes with Rack, to run our <strong>&quot;Hello Cuba!&quot;</strong> application.</p>
+
+<p>To use <code>rackup</code>, you need to supply a config file (by convention it uses
+the <em>.ru</em> extension). This file connects the Rack interface with our
+application through the <code>run</code> method. This method receives an object that
+returns a Rack response. In our case, that object is our Cuba application:</p>
+
+<pre><code class="ruby">run(Cuba)
+</code></pre>
+
+<p><code>rackup</code> also figures out which server you have available. When we
+executed <code>rackup config.ru</code>, it fired up <em>WEBrick</em>, a web server
+built into Ruby by default.</p>
+
+<pre><code class="no-highlight">$ rackup config.ru
+[2014-05-06 23:37:23] INFO  WEBrick 1.3.1
+...
+</code></pre>
+
+<p>To read more about Rack, visit their home page: <a href="http://rack.github.io/">http://rack.github.io/</a>.</p>
+
+<h1>Setting the Road</h1>
+
+<p>Now that we know the basics of Cuba, we&#39;re ready to make our twitter
+clone. In this chapter, we&#39;ll set the road to start coding the application
+and have a look at how Cuba applications looks in the wild.</p>
+
+<p>After reading this chapter, you will know:</p>
+
+<ul>
+<li>The general layout of a Cuba application.</li>
+<li>How to properly manage project dependencies.</li>
+<li>How the application initializes.</li>
+</ul>
+
+<h2>Structuring the Application</h2>
+
+<p>With Cuba you have a lot of freedom to choose the architecture
+of your application. In this book, we will use a template called
+<a href="https://github.com/frodsan/app">app</a>. To start using it, open up
+a command line prompt and type:</p>
+
+<pre><code class="no-highlight">$ git clone git@github.com:frodsan/app.git twitter
+</code></pre>
+
+<p>This will create a <em>twitter</em> directory with the files and folders for
+a minimal functional application.</p>
+
+<p>After the download is completed, switch to the <em>twitter</em> directory.</p>
+
+<pre><code class="no-highlight">$ cd twitter
+</code></pre>
+
+<p>From now on, you must execute all the command line instructions from this
+directory. For example:</p>
+
+<pre><code class="no-highlight">$ ls
+README.md    config.ru    helpers    makefile    public    test
+app.rb       filters      mails      models      routes    views
+</code></pre>
+
+<p>This table shows a basic overview of the files and folders that make up
+the structure of the application. We&#39;ll learn more about these throughout
+the rest of this book.</p>
+
+<table><thead>
+<tr>
+<th>File/Folder</th>
+<th>Purpose</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.gems</td>
+<td>A list of the dependencies for the application.</td>
+</tr>
+<tr>
+<td>.env</td>
+<td>Contains a list of sensitive configurations (e.g. the databases url).</td>
+</tr>
+<tr>
+<td>app.rb</td>
+<td>This is the main file that loads all the dependencies, sets the proper configurations and defines the main routes.</td>
+</tr>
+<tr>
+<td>config.ru</td>
+<td>Rack configuration file.</td>
+</tr>
+<tr>
+<td>filters/</td>
+<td>Contains the form validators. Unlike other frameworks, Cuba delegates validation and whitelisting responsibilities to filter objects.</td>
+</tr>
+<tr>
+<td>helpers/</td>
+<td>Helpers are a simple way to extend Cuba&#39;s functionality. This folder contains all the helpers for the application.</td>
+</tr>
+<tr>
+<td>mails/</td>
+<td>Contains mail templates used by the application.</td>
+</tr>
+<tr>
+<td>makefile</td>
+<td>This file contains a series of tasks that can be run from the command line.</td>
+</tr>
+<tr>
+<td>models/</td>
+<td>Contains the models for the application.</td>
+</tr>
+<tr>
+<td>public/</td>
+<td>Contains static files accessible to the public (e.g. web browsers). Such as error pages, images, JavaScript and CSS files, etc.</td>
+</tr>
+<tr>
+<td>routes/</td>
+<td>This folder contains  miniature applications that add functionality to the main one.</td>
+</tr>
+<tr>
+<td>test/</td>
+<td>Application tests.</td>
+</tr>
+<tr>
+<td>views/</td>
+<td>Contains the HTML templates for the application.</td>
+</tr>
+</tbody></table>
+
+<h2>Managing Dependencies</h2>
+
+<p>In every web application, there are common tasks that you need to do
+(e.g authenticate users or query a database). Libraries are useful for
+not reinventing the wheel, and in Ruby they are often referred to as
+<strong>gems</strong>.</p>
+
+<p>Ruby uses <a href="https://rubygems.org/">Rubygems</a> to distribute them and to
+ease the installation. Installing Cuba is as easy as typing
+<code>gem install cuba</code> in the command line.</p>
+
+<p>Even though <strong>Rubygems</strong> is useful when installing gems, it has its
+limitations. Unfortunately, it installs all gems globally. It means
+that if you have different versions of a gem installed, you have to
+make sure that you require the right version for your project.</p>
+
+<p><a href="http://bundler.io/">Bundler</a> is one of the most used tools to solve
+this problem. It has approximately ~10k lines of code, that&#39;s more than
+all the dependencies of this project put together. Because of this
+complexity, we&#39;ll use a different approach in this book.</p>
+
+<h2>&quot;The Right Way&quot;</h2>
+
+<p>Back to the original problem, we need a way to keep track of the
+dependencies and install the right version of each one. This is where
+<a href="https://github.com/soveran/gs">gs</a> and <a href="https://github.com/cyx/dep">dep</a>
+come to the rescue.</p>
+
+<p>With <strong>gs</strong> you can create a <strong>gemset</strong> for each project. A <strong>gemset</strong>
+is an isolated space to install gems. By providing each project with
+their own gemset, you can be sure that the right version of a gem is
+loaded.</p>
+
+<p>While <strong>gs</strong> handles the gemset, <strong>dep</strong> keeps track of the dependencies
+for your project, making sure that all the dependencies are met.</p>
+
+<p>To install <strong>gs</strong> and <strong>dep</strong>, use the <code>gem install</code> command:</p>
+
+<pre><code class="no-highlight">$ gem install gs
+$ gem install dep
+</code></pre>
+
+<p>Before installing the dependencies of this project, you need a gemset.
+Creating one is as easy as typing:</p>
+
+<pre><code class="no-highlight">$ gs init
+</code></pre>
+
+<p>This command does two things. First, it creates a directory <code>.gs</code>, where
+Rubygems will install the dependencies. Secondly, it starts a shell session
+and set the <code>.gs</code> folder as the path where Ruby will look for gems.</p>
+
+<p>Now that we created a local gemset, it&#39;s time to install the dependencies
+for our project. <strong>dep</strong> uses a <code>.gems</code> file to keep track of the required
+dependencies for the application. This file lists the gems with their
+version numbers.</p>
+
+<p>In our application&#39;s folder, you will find the <code>.gems</code> file that contains
+the dependencies we&#39;ll use in this book. We&#39;ll talk more about each gem
+later.</p>
+
+<pre><code class="no-highlight">cuba -v 3.1.1
+cutest -v 1.2.1
+hache -v 1.1.0
+malone -v 1.0.6
+mote -v 1.1.2
+mote-render -v 1.0.0
+ohm -v 2.0.1
+rack-protection -v 1.5.3
+rack-test -v 0.6.2
+scrivener -v 0.2.0
+shield -v 2.1.0
+shotgun -v 0.9
+</code></pre>
+
+<p>Finally, we need to install the gems by running:</p>
+
+<pre><code class="no-highlight">$ dep install
+</code></pre>
+
+<p>This simply does a <code>gem install</code> for each dependency on the list. <strong>dep</strong>
+also has features for adding and removing dependencies. To read more about
+<strong>dep</strong>, visit their <a href="http://twpil.github.io/dep/">home page</a>.</p>
+
+<h2>Up and Running</h2>
+
+<p>Now that we&#39;ve installed the dependencies, it&#39;s time to see how our
+minimal application looks.</p>
+
+<p>To get it up and running, we need to create a file with some
+configurations. Go to the command line and type <code>make setup</code>.</p>
+
+<p><img src="/img/book/setup.png" alt="setup"></p>
+
+<p>As you can see, this created a file called <em>.env</em>. For now, it&#39;s enough
+for you to know that this file contains sensitive configurations for the
+application. We&#39;ll discuss this in more detail later.</p>
+
+<p>To see the application in action, type <code>make server</code> in the command line.</p>
+
+<p><img src="/img/book/shotgun.png" alt="shotgun"></p>
+
+<p>Unlike before, we&#39;re now using <em>shotgun</em> instead of <em>rackup</em>. <em>Shotgun</em>
+is a gem that reloads the application for every request. That&#39;s great for
+development because we don&#39;t need to restart the server every time that
+we change the application. Now navigate to <a href="http://localhost:9393/">http://localhost:9393/</a>. You
+should see the Cuba welcome page.</p>
+
+<p><img src="/img/book/home.png" alt="home"></p>
+
+<p><em>Shotgun</em> uses a <em>config.ru</em> file just like <em>rackup</em>. Let&#39;s see what the
+<em>config.ru</em> file looks like in this template.</p>
+
+<pre><code class="ruby">require &quot;./app&quot;
+
+run(Cuba)
+</code></pre>
+
+<p>This time the definition of the application has been placed in a different
+file. This file is called <em>app.rb</em> and is the main file of our application.
+In the next section, we&#39;ll explore this file.</p>
+
+<h2>Loading the Application</h2>
+
+<p>In this section, we&#39;ll see how the <em>app.rb</em> file initializes the
+application. This file is important in the boot process because it
+defines everything the application needs in order to run. We&#39;ll walk
+step by step through this file so you understand everything that happens
+under the hood.</p>
+
+<p>First, we require the gems we&#39;ll use in this project.</p>
+
+<pre><code class="ruby">require &quot;cuba&quot;
+require &quot;hache&quot;
+require &quot;malone&quot;
+...
+require &quot;rack/protection&quot;
+require &quot;scrivener&quot;
+</code></pre>
+
+<p>Then we define some constants that, for example, are used to connect to a
+database or to check cookie data integrity. Because these are sensitive
+configurations, we use environment variables instead of putting them
+directly into the code.</p>
+
+<pre><code class="ruby">APP_KEY = ENV.fetch(&quot;APP_KEY&quot;)
+APP_SECRET = ENV.fetch(&quot;APP_SECRET&quot;)
+DATABASE_URL = ENV.fetch(&quot;DATABASE_URL&quot;)
+MAIL_URL = ENV.fetch(&quot;MAIL_URL&quot;)
+</code></pre>
+
+<p>To load these values into our environment, we read them from the <em>.env</em>
+file when starting the server. Then, we use the <code>ENV</code> object to access
+them. The <code>fetch</code> method will raise an error if a configuration is not
+present.</p>
+
+<p>The next part is where we connect Cuba with its friends. We&#39;ll have a
+closer look later.</p>
+
+<pre><code class="ruby">Ohm.redis = Redic.new(DATABASE_URL)
+Malone.connect(url: MAIL_URL)
+
+Cuba.plugin(Mote::Render)
+Cuba.plugin(Shield::Helpers)
+
+...
+
+Cuba.use(Rack::Protection)
+Cuba.use(Rack::Protection::RemoteReferrer)
+</code></pre>
+
+<p>Next, we require the content of the subfolders where we find the core code
+of our application. This includes models, filter objects, helpers, etc.</p>
+
+<pre><code class="ruby">Dir[&quot;./models/**/*.rb&quot;].each  { |f| require(f) }
+Dir[&quot;./filters/**/*.rb&quot;].each { |f| require(f) }
+Dir[&quot;./helpers/**/*.rb&quot;].each { |f| require(f) }
+Dir[&quot;./routes/**/*.rb&quot;].each  { |f| require(f) }
+</code></pre>
+
+<p>Finally, you should recognize the last part:</p>
+
+<pre><code class="ruby">Cuba.define do
+  on root do
+    render(&quot;home&quot;)
+  end
+end
+</code></pre>
+
+<p>It&#39;s almost the same as in our first example, but with one significant
+difference: the <code>render</code> method. In the next chapter, we&#39;ll explain this
+method and see how it can be used to render view templates.</p>
+
+<h1>The View</h1>
+
+<p>Suppose you have to write a big chunk of HTML code. You could write it
+like this:</p>
+
+<pre><code class="ruby">Cuba.define do
+  on root do
+    res.write(&quot;
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;!-- ... --&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;!-- ... --&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    &quot;)
+  end
+end
+</code></pre>
+
+<p>The problem with this approach is that it&#39;s hard to reuse parts of the HTML
+that every page uses, for example a navigation bar or a footer. Therefore,
+we separate it into <em>views</em>, which are templates that gets converted to
+HTML and sent back to the browser.</p>
+
+<p>In this chapter, you&#39;ll learn how to use <a href="https://github.com/soveran/mote">Mote</a>,
+a minimal template engine to render <em>views</em>.</p>
+
+<h2>Mote</h2>
+
+<p>Mote is a fast template engine that allows us to put Ruby code into any
+plain text document, like HTML.</p>
+
+<p>A very simple example is this:</p>
+
+<pre><code class="ruby">require &quot;mote&quot;
+
+template = Mote.parse(&quot;The value of pi is {{ Math::PI }}&quot;)
+template.call
+# =&gt; The value of pi is 3.141592653589793
+</code></pre>
+
+<p>Mote recognizes two tags to evaluate Ruby code: <code>%</code> and <code>{{}}</code>.
+The difference between them is that while the <code>%</code> tag only evaluates
+the code, the <code>{{}}</code> tag also prints the result to the template.</p>
+
+<p>The next example shows a list of different use cases you may face:</p>
+
+<pre><code class="ruby">% # This is a comment.
+% x = 2
+% y = 1
+
+&lt;p&gt;The value of x is {{ x }}&lt;/p&gt;
+&lt;p&gt;The value of y is {{ y }}&lt;/p&gt;
+&lt;p&gt;The sum of x and y is {{ x + y }}&lt;/p&gt;
+</code></pre>
+
+<p>Following the above example, the printed result will be:</p>
+
+<pre><code class="html">&lt;p&gt;The value of x is 2&lt;/p&gt;
+&lt;p&gt;The value of y is 1&lt;/p&gt;
+&lt;p&gt;The sum of x and y is 3&lt;/p&gt;
+</code></pre>
+
+<p>The next section shows how to integrate Mote with Cuba.</p>
+
+<h2>Mote &amp; Cuba</h2>
+
+<p>To use Mote in our application, we have to require the <code>mote/render</code> file
+and include the <code>Mote::Render</code> plugin that comes with it. If we look closely,
+this has already been done in the <code>app.rb</code> file:</p>
+
+<pre><code class="ruby">require &quot;mote&quot;
+require &quot;mote/render&quot;
+
+...
+
+Cuba.plugin(Mote::Render)
+</code></pre>
+
+<p>The <code>Mote::Render</code> plugin is provided by the <a href="https://github.com/frodsan/mote-render/">mote-render</a>
+gem, one of the gems we installed in the section <a href="/en/setting_the_road/managing_dependencies.html">Managing Dependencies</a>.</p>
+
+<h2>Templates</h2>
+
+<p>Now that we have included Mote in our project, it&#39;s time to have
+a look at the  <em>view templates</em>. All view templates are typically
+placed in a folder named <code>views</code> as shown in the section
+<a href="/en/setting_the_road/structuring_the_application.html">Structuring the Application</a>.</p>
+
+<p>If we have a look at the <code>views</code> folder in our application, we see two
+files, <code>layout.mote</code> and <code>home.mote</code>. The <code>layout.mote</code> is used to
+define the main structure of our site. It contains all the elements
+that will be repeated on every page rendered by our application, such
+as the header and footer.</p>
+
+<p>In our case it looks like this:</p>
+
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;App&lt;/title&gt;
+    &lt;link href=&quot;/css/styles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{ params[:content] }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Here we define a simple HTML document, with a header and a body.
+The header will be the same on all our pages and is therefore
+included in the main layout. The content of the body however will differ
+and is passed to the layout depending on which page we want to render.</p>
+
+<p>As you can see the content parameter is printed to the template using
+the <code>{{}}</code> tags, like this: <code>{{ params[:content] }}</code>.</p>
+
+<p>Now, have a look at the <code>home.mote</code> file. The content of this file is
+rendered when displaying the home page of the application. Right now it&#39;s
+showing an embedded version of the Cuba home page.</p>
+
+<pre><code class="html">&lt;iframe src=&quot;http://cuba.is&quot; frameborder=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;
+  You need a Frames Capable browser to view this content.
+&lt;/iframe&gt;
+</code></pre>
+
+<p>Open the file and replace the content with the following:</p>
+
+<pre><code class="html">&lt;p&gt;Hello Cuba!&lt;/p&gt;
+</code></pre>
+
+<p>If you start your server and go to
+<a href="http://localhost:9393">localhost:9393</a>, you should see the following
+greeting:</p>
+
+<p><img src="/img/book/hello2.png" alt="hello"></p>
+
+<p>You changed the content of the home page!</p>
+
+    </section>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
