@@ -188,4 +188,8 @@ p a:hover {
   h2 {
     margin-top: 150px;
   }
+
+  p {
+    width: 500px;
+  }
 }
