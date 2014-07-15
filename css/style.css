@@ -144,7 +144,7 @@ p a:hover {
   }
 
   h2 {
-    margin-top: 80px;
+    margin-top: 15%;
     font-size: 30px;
   }
 
@@ -185,10 +185,10 @@ p a:hover {
     top: 20px;
   }
 
-  h2 {
+  /*h2 {
     margin-top: 150px;
   }
-
+*/
   p {
     width: 500px;
   }
