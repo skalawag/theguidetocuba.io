@@ -7,6 +7,4 @@ Tasks
   is not very marketable. I like this part "Learn how to make Ruby web application ...". I didn't
   find something better yet.
 
-- Update Introduction page. It needs to be better. Just better.
-
 - Update "Published with GitBook" logo. (https://github.com/GitbookIO/logos/blob/master/published-with-gitbook.png)
