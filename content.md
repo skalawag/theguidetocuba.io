@@ -89,7 +89,7 @@ Hello Cuba!
 
 Before getting started, we have to install Cuba. Use the `gem` command:
 
-```
+```no-highlight
 $ gem install cuba
 ```
 

@@ -1,5 +1,26 @@
 code, pre {
   font-family: Monaco, monospace;
+  font-size: 0.95em;
+}
+
+code {
+  background-color: #F8F8F8;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  padding: 1px 4px;
+}
+
+.no-highlight {
+  display: block;
+}
+
+.hljs {
+  display: block;
+  background: #F8F8F8;
+  color: #333333;
+  max-height: 340px;
+  padding: 0.5em;
+  overflow-y: scroll;
 }
 
 .hljs-comment,
@@ -58,9 +79,3 @@ code, pre {
   color: #8959a8;
 }
 
-.hljs {
-  display: block;
-  background: white;
-  color: #4d4d4c;
-  padding: 0.5em;
-}
