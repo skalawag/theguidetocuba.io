@@ -196,7 +196,7 @@ run(Cuba)
 executed `rackup config.ru`, it fired up *WEBrick*, a web server
 built into Ruby by default.
 
-```
+```no-highlight
 $ rackup config.ru
 [2014-05-06 23:37:23] INFO  WEBrick 1.3.1
 ...
@@ -225,7 +225,7 @@ of your application. In this book, we will use a template called
 [app](https://github.com/frodsan/app). To start using it, open up
 a command line prompt and type:
 
-```
+```no-highlight
 $ git clone git@github.com:frodsan/app.git twitter
 ```
 
@@ -234,14 +234,14 @@ a minimal functional application.
 
 After the download is completed, switch to the *twitter* directory.
 
-```
+```no-highlight
 $ cd twitter
 ```
 
 From now on, you must execute all the command line instructions from this
 directory. For example:
 
-```
+```no-highlight
 $ ls
 README.md    config.ru    helpers    makefile    public    test
 app.rb       filters      mails      models      routes    views
@@ -307,7 +307,7 @@ for your project, making sure that all the dependencies are met.
 
 To install **gs** and **dep**, use the `gem install` command:
 
-```
+```no-highlight
 $ gem install gs
 $ gem install dep
 ```
@@ -315,7 +315,7 @@ $ gem install dep
 Before installing the dependencies of this project, you need a gemset.
 Creating one is as easy as typing:
 
-```
+```no-highlight
 $ gs init
 ```
 
@@ -332,7 +332,7 @@ In our application's folder, you will find the `.gems` file that contains
 the dependencies we'll use in this book. We'll talk more about each gem
 later.
 
-```
+```no-highlight
 cuba -v 3.1.1
 cutest -v 1.2.1
 hache -v 1.1.0
@@ -349,7 +349,7 @@ shotgun -v 0.9
 
 Finally, we need to install the gems by running:
 
-```
+```no-highlight
 $ dep install
 ```
 
