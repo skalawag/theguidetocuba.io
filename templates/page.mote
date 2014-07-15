@@ -14,7 +14,7 @@
   <body>
     <header>
       <a href="#" class="action pull-left"><i class="fa fa-bars"></i></a>
-      <a href="#" class="action pull-right"><i class="fa fa-gittip"></i></a>
+      <a href="https://www.gittip.com/frodsan/" class="action pull-right"><i class="fa fa-gittip"></i></a>
     </header>
 
     <section id="content">
