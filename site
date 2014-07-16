@@ -12,7 +12,7 @@ class Site
   end
 
   def generate
-    return mote("templates/page.mote", config.merge(content: markdown))
+    return mote("templates/page.mote", config.merge(content: markdown, toc: toc))
   end
 
   def config
@@ -20,10 +20,14 @@ class Site
   end
 
   def markdown
-    options = { tables: true, fenced_code_blocks: true }
-    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+    options = { tables: true, fenced_code_blocks: true, with_toc_data: true }
+    renderer = Redcarpet::Render::HTML.new(options)
 
-    return renderer.render(@content)
+    return Redcarpet::Markdown.new(renderer).render(@content)
+  end
+
+  def toc
+    return Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(@content)
   end
 end
 

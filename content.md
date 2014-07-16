@@ -8,7 +8,7 @@ This book is a work in progresses and is licensed under the
 [Creative Commons Attribution Non Commercial Share Alike 4.0 license]
 (http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-## Introduction
+# Introduction
 
 The Guide to Cuba will teach you how to create a Ruby web
 application from scratch using Cuba. Cuba is a micro framework
@@ -518,7 +518,7 @@ require "mote"
 
 template = Mote.parse("The value of pi is {{ Math::PI }}")
 template.call
-# => The value of pi is 3.141592653589793
+=> The value of pi is 3.141592653589793
 ```
 
 Mote recognizes two tags to evaluate Ruby code: `%` and `{{}}`.
