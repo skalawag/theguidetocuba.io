@@ -28,6 +28,15 @@ body {
   color: #428BCA;
 }
 
+#links {
+  border-bottom: 1px solid #DDD;
+  font-size: 1.2em;
+  padding-left: 10px !important;
+  padding-bottom: 1em;
+  letter-spacing: 0.7em;
+  text-align: center;
+}
+
 #content {
   line-height: 1.6em;
   padding-bottom: 55px;
