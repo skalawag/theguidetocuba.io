@@ -4,7 +4,7 @@ Francesco Rodríguez & Mayn Ektvedt Kjær
 
 Version 0.1
 
-This book is a work in progresses and is licensed under the
+This book is a work in progress and is licensed under the
 [Creative Commons Attribution Non Commercial Share Alike 4.0 license]
 (http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
