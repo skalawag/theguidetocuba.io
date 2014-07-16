@@ -17,10 +17,9 @@ It is open source, and you can have a look at the code
 [here](https://github.com/soveran/cuba).
 
 Some Ruby frameworks can be bloated and offer functionality you don't
-need. We'll teach you how to use Cuba together
-will small and simple Ruby libraries to customize your stack.
-By applying this minimalist philosophy you achieve more flexibility,
-less complexity and maintainable code.
+need. We'll teach you how to use Cuba together will small and simple Ruby
+libraries to customize your stack. By applying this minimalist philosophy
+you achieve more flexibility, less complexity and maintainable code.
 
 Here's a list of pages that uses Cuba for inspiration:
 
@@ -32,9 +31,10 @@ Here's a list of pages that uses Cuba for inspiration:
 
 # 2. Assumptions
 
-This book is intended for everyone who wants to get started with a Cuba
-application from scratch, whether you are an experienced programmer or
-not. By following this book, we'll build a Twitter clone from scratch.
+This book is intended for everyone who wants to get started with Cuba.
+It's recommended to have some basic knowledge of the Ruby programming
+language. If this is the first time you hear about Ruby, we encourage
+you to take this tutorial to get up to speed: <http://tryruby.org/>.
 
 In order to try out the examples of the book, you need to have some
 prerequisites installed:
@@ -42,11 +42,8 @@ prerequisites installed:
 * Ruby 2.0 or newer. You can get the latest Ruby from the
   [Ruby download page](https://www.ruby-lang.org/en/downloads/).
 
-* The [Redis](http://redis.io) database. If you haven't yet installed Redis, you can
-  follow the instructions in the [Redis download page](http://redis.io/download).
-
-* [Git](http://git-scm.com/), the version control system. You can follow the installation
-  instructions at the [Installing Git section of Pro Git](http://www.git-scm.com/book/en/Getting-Started-Installing-Git).
+* The [Redis](http://redis.io) database. If you don't have Redis installed,
+  you can follow the instructions in the [Redis download page](http://redis.io/download).
 
 > **NOTE:** All the code examples have been tested on OSX and Linux.
 
