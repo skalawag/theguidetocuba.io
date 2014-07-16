@@ -18,9 +18,14 @@
       <a href="https://www.gittip.com/frodsan/" class="action pull-right"><i class="fa fa-gittip"></i></a>
     </header>
 
-    <section id="content">
-      {{ toc }}
-      {{ content }}
+    <section id="book">
+      <nav id="toc">
+        {{ toc }}
+      </nav>
+
+      <section id="content">
+        {{ content }}
+      </section>
     </section>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
