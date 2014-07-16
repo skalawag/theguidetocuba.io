@@ -23,7 +23,9 @@ class Site
   end
 
   def toc
-    return Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(@content)
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC)
+
+    return renderer.render(@content.sub(/^(.*)$/, ""))
   end
 end
 
