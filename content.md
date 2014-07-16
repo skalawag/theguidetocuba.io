@@ -20,7 +20,7 @@ Some Ruby frameworks can be bloated and offer functionality you don't
 need. We'll teach you how to use Cuba together
 will small and simple Ruby libraries to customize your stack.
 By applying this minimalist philosophy you achieve more flexibility,
-less complexity and easier maintainable code.
+less complexity and maintainable code.
 
 Here's a list of pages that uses Cuba for inspiration:
 
