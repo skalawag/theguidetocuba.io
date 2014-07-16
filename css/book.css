@@ -1,5 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }
 
 header {
@@ -35,13 +36,13 @@ header {
 }
 
 #toc a {
-  color: #000;
-  line-height: 1.6em;
+  color: #555;
+  line-height: 2em;
   text-decoration: none;
 }
 
 #toc a:hover, a:focus {
-  color: #4183C4;
+  color: #428BCA;
 }
 
 #content {
