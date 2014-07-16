@@ -54,6 +54,10 @@ header {
   width: 800px;
 }
 
+#content h1 {
+  font-size: 2em;
+}
+
 #content a {
   color: #4183C4;
   text-decoration: none;
