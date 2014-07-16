@@ -14,6 +14,11 @@ header {
   left: 0;
 }
 
+.logo {
+  display: inline-block;
+  padding-left: 15px;
+}
+
 .action {
   color: #7E888B;
   float: right;
