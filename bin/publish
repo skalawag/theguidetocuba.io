@@ -1,0 +1,24 @@
+#!/usr/bin/env rc
+
+# Usage: publish <site>
+if (! ~ $#* 1) {
+	printf 'usage: publish <site>\n'
+	exit
+}
+
+site = $1
+
+if (! test -d $site) {
+	printf 'failed: %s not exists\n' $site
+	exit
+}
+
+cd $site
+
+git stash
+git pull origin gh-pages
+git stash pop
+
+git add -A .
+git commit -m 'Updates.'
+git push origin gh-pages
