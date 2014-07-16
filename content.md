@@ -1,12 +1,9 @@
 # The Guide to Cuba
 
-Francesco Rodríguez & Mayn Ektvedt Kjær
-
-Version 0.1
+<img src="/img/cover.png" style="border: 1px solid black; width: 400px;"/>
 
 This book is a work in progress and is licensed under the
-[Creative Commons Attribution Non Commercial Share Alike 4.0 license]
-(http://creativecommons.org/licenses/by-nc-sa/4.0/).
+[CC BY-NC-SA 4.0 license](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 # 1. Introduction
 
