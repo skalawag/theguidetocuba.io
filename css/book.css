@@ -19,39 +19,9 @@ header {
   padding: 0px 15px;
 }
 
-#book {
-  line-height: 1.6em;
-  padding: 55px 15px;
-}
-
-#book a {
-  color: #4183C4;
-  text-decoration: none;
-}
-
-#book a:hover, a:focus {
-  text-decoration: underline;
-}
-
-#book img {
-  max-width: 100%;
-}
-
-#book ul {
-  padding-left: 1.5em;
-}
-
-#book blockquote {
-  border-left: 4px solid #DDD;
-  color: #777;
-  margin: 0;
-  padding: 0px 15px;
-}
-
 #toc {
   background: white;
   border-right: 1px solid #DDD;
-  margin-left: 20px;
   position: fixed;
   top: 51px;
   left: 0;
@@ -59,8 +29,50 @@ header {
   width: 290px;
 }
 
+#toc ul {
+  padding-left: 15px;
+  list-style: none;
+}
+
+#toc a {
+  color: #000;
+  line-height: 1.6em;
+  text-decoration: none;
+}
+
+#toc a:hover, a:focus {
+  color: #4183C4;
+}
+
 #content {
+  line-height: 1.6em;
+  padding-top: 55px;
+  padding-bottom: 55px;
   padding-left: 300px;
   margin: 0 auto;
   width: 800px;
+}
+
+#content a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+#content a:hover, a:focus {
+  text-decoration: underline;
+}
+
+#content img {
+  max-width: 100%;
+}
+
+#content ul {
+  padding-left: 1.5em;
+}
+
+#content blockquote {
+  border-left: 4px solid #DDD;
+  color: #777;
+  margin: 0;
+  padding: 0px 15px;
 }
