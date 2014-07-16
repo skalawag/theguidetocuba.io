@@ -21,29 +21,29 @@ header {
   padding: 0px 15px;
 }
 
-#content {
+#book {
   line-height: 1.6em;
   padding: 5px 15px;
 }
 
-#content a {
+#book a {
   color: #4183C4;
   text-decoration: none;
 }
 
-#content a:hover, a:focus {
+#book a:hover, a:focus {
   text-decoration: underline;
 }
 
-#content img {
+#book img {
   max-width: 100%;
 }
 
-#content ul {
+#book ul {
   padding-left: 1.5em;
 }
 
-#content blockquote {
+#book blockquote {
   border-left: 4px solid #DDD;
   color: #777;
   margin: 0;
