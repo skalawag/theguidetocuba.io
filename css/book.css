@@ -3,27 +3,25 @@ body {
 }
 
 header {
+  background: white;
   border-bottom: 1px solid #DDD;
   height: 50px;
   line-height: 3em;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .action {
   color: #7E888B;
+  float: right;
   padding: 0px 15px;
 }
 
 #book {
   line-height: 1.6em;
-  padding: 5px 15px;
+  padding: 55px 15px;
 }
 
 #book a {
@@ -48,4 +46,21 @@ header {
   color: #777;
   margin: 0;
   padding: 0px 15px;
+}
+
+#toc {
+  background: white;
+  border-right: 1px solid #DDD;
+  margin-left: 20px;
+  position: fixed;
+  top: 51px;
+  left: 0;
+  bottom: 0;
+  width: 290px;
+}
+
+#content {
+  padding-left: 300px;
+  margin: 0 auto;
+  width: 800px;
 }
