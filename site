@@ -12,11 +12,7 @@ class Site
   end
 
   def generate
-    return mote("templates/page.mote", config.merge(content: markdown, toc: toc))
-  end
-
-  def config
-    return JSON.parse(File.read("book.json"))
+    return mote("templates/page.mote", content: markdown, toc: toc)
   end
 
   def markdown
