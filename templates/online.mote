@@ -13,17 +13,18 @@
     <link rel="icon" type="image/png" href="/img/favicon.png"/>
   </head>
   <body>
-    <!--
-    <header>
-      <a href="/"><img class="logo" src="/img/favicon.png"/></a>
-      <a href="https://www.gittip.com/frodsan/" class="action"><i class="fa fa-gittip"></i></a>
-      <a target="_blank" href="https://twitter.com/home?status=http://theguidetocuba.io/" class="action"><i class="fa fa-twitter"></i></a>
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://theguidetocuba.io/" class="action"><i class="fa fa-facebook"></i></a>
-    </header>
-    -->
-
     <section id="book">
       <nav id="toc">
+        <ul id="links">
+          <li>
+            <a href="/"><i class="fa fa-home"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://theguidetocuba.io/" class="action"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/home?status=http://theguidetocuba.io/" class="action"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.gittip.com/frodsan/" class="action"><i class="fa fa-gittip"></i></a>
+            <a href="https://github.com/frodsan/theguidetocuba.io/issues/new" class="action"><i class="fa fa-comment"></i></a>
+          </li>
+        </ul>
+
         {{ toc }}
       </nav>
 

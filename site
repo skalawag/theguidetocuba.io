@@ -12,7 +12,7 @@ class Site
   end
 
   def generate
-    return mote("templates/page.mote", content: markdown, toc: toc)
+    return mote("templates/online.mote", content: markdown, toc: toc)
   end
 
   def markdown
