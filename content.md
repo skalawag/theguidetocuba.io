@@ -65,7 +65,7 @@ the proper tools for the job.
 
 ## 3.2. Hello Cuba!
 
-Before getting started, we have to install Cuba. Use the `gem` command:
+Before getting started, use the `gem` command to install Cuba:
 
 ```no-highlight
 $ gem install cuba
