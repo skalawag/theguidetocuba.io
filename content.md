@@ -12,7 +12,7 @@ It is open source, and you can have a look at the code
 [here](https://github.com/soveran/cuba).
 
 Some Ruby frameworks can be bloated and offer functionality you don't
-need. We'll teach you how to use Cuba together will small and simple Ruby
+need. We'll teach you how to use Cuba together with small and simple Ruby
 libraries to customize your stack. By applying this minimalist philosophy
 you achieve more flexibility, less complexity and maintainable code.
 
