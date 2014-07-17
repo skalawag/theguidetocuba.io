@@ -63,8 +63,8 @@ in Ruby.
   understand what Rack is just yet, we'll discuss it later.
 
 * It only does one thing and do it well, map HTTP requests. This gives us
-  the freedom to choose the proper tools for the job. This book will introduce
-  other libraries that share the same design philosophy.
+  the freedom to choose the proper tools depending on the job at hand. This
+  book will introduce other libraries that share the same design philosophy.
 
 * It is fast? [Yes, it is](https://github.com/luislavena/bench-micro).
 
@@ -76,7 +76,7 @@ Before getting started, use the `gem` command to install Cuba:
 $ gem install cuba
 ```
 
-Now that Cuba is installed, it's easy to create a Cuba application. Open
+Now that Cuba is installed, it's easy to create an application. Open
 your text editor of preference and create a file called `config.ru` with
 the following code:
 
