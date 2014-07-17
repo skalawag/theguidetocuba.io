@@ -46,7 +46,7 @@ prerequisites installed:
 
 This first chapter focuses on the bare minimum you need to know to work
 with Cuba. We'll learn some of the core concepts walking through the
-creation of a simple "Hello World" application.
+creation of the classical "Hello World" application.
 
 ## 3.1. What's Cuba?
 
