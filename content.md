@@ -51,7 +51,7 @@ creation of the classical "Hello World" application.
 ## 3.1. What's Cuba?
 
 Cuba is one of the lightest option when it comes to web development
-in Ruby.
+in Ruby. Here are some core attributes that are good to mention:
 
 * It's incredibly small, almost 170 lines of code. It can take you half hour
   to read the code and understand Cuba from inside. This simplicity by design
