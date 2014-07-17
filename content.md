@@ -63,11 +63,6 @@ compared to other web frameworks. Also, it doesn’t make assumptions
 about the "best" way to do things. That gives us the freedom to choose
 the proper tools for the job.
 
-Since Cuba doesn’t ship with all the tools we need to create our example
-application, this book will also introduce other libraries that share the
-same design philosophy. Together, they make web development simple,
-understandable and fun.
-
 ## 3.2. Hello Cuba!
 
 Before getting started, we have to install Cuba. Use the `gem` command:
