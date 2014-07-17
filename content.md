@@ -50,18 +50,23 @@ creation of the classical "Hello World" application.
 
 ## 3.1. What's Cuba?
 
-To begin, let's take a moment to answer *"what is Cuba?"*.
+Cuba is one of the lightest option when it comes to web development
+in Ruby.
 
-Cuba is a web application micro-framework written in Ruby by
-[Michel Martens](https://github.com/soveran). It rides on
-[Rack](http://rack.github.io) so we have the benefits of middleware,
-Rack libraries, and a variety of web servers for free.
+* It's incredibly small, almost 170 lines of code. It can take you half hour
+  to read the code and understand Cuba from inside. This simplicity by design
+  makes Cuba easy to debug and very stable (no major changes since 2012).
 
-Cuba is minimalist by design (203 lines of code) which makes it
-[faster](https://github.com/luislavena/bench-micro#requestssec)
-compared to other web frameworks. Also, it doesn’t make assumptions
-about the "best" way to do things. That gives us the freedom to choose
-the proper tools for the job.
+* Like most web frameworks in Ruby, Cuba is built on top of Rack, the Ruby
+  webserver interface. Because of this, we have the benefits of existing
+  libraries and a variety of web servers for free. Don't worry if you don't
+  understand what Rack is just yet, we'll discuss it later.
+
+* It only does one thing and do it well, map HTTP requests. This gives us
+  the freedom to choose the proper tools for the job. This book will introduce
+  other libraries that share the same design philosophy.
+
+* It is fast? [Yes, it is](https://github.com/luislavena/bench-micro).
 
 ## 3.2. Hello Cuba!
 
