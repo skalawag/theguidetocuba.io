@@ -1,5 +1,3 @@
-# The Guide to Cuba
-
 <img src="/img/cover.png" style="border: 1px solid black; width: 400px;"/>
 
 This book is a work in progress and is licensed under the

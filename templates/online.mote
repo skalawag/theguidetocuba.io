@@ -29,6 +29,8 @@
       </nav>
 
       <section id="content">
+        <h1>The Guide to Cuba</h1>
+
         {{ content }}
       </section>
     </section>
