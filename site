@@ -23,9 +23,7 @@ class Site
   end
 
   def toc
-    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC)
-
-    return renderer.render(@content)
+    return Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(@content)
   end
 end
 
