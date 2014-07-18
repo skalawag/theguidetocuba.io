@@ -45,7 +45,7 @@
 <a href="#3.3.-breaking-down-the-syntax">3.3. Breaking Down the Syntax</a>
 </li>
 <li>
-<a href="#3.4.-rack-&-roll!">3.4. Rack &amp; Roll!</a>
+<a href="#3.4.-rack">3.4. Rack</a>
 </li>
 </ul>
 </li>
@@ -132,7 +132,7 @@ will introduce other libraries that share the same design philosophy.</p></li>
 
 <h2 id="3.2.-hello-cuba!">3.2. Hello Cuba!</h2>
 
-<p>Before getting started, use the <code>gem</code> command to install Cuba:</p>
+<p>To get started, use the <code>gem</code> command to install Cuba:</p>
 
 <pre><code class="no-highlight">$ gem install cuba
 </code></pre>
@@ -157,33 +157,28 @@ run(Cuba)
 
 <p><img src="/img/book/rackup.png" alt="rackup"></p>
 
-<p>Now open a browser and navigate to <a href="http://localhost:9292/">http://localhost:9292/</a>. It should
+<p>Now open a browser and navigate to <a href="http://localhost:9292">http://localhost:9292</a>. It should
 show a greeting message as shown below:</p>
 
 <p><img src="/img/book/hello.png" alt="hello"></p>
 
 <blockquote>
 <p><strong>NOTE:</strong> To stop the web server, hit <code>Ctrl+C</code> in the terminal window
-where it&#39;s running. To verify the server has stopped you should see your
-command prompt cursor again.</p>
+where it&#39;s running. To verify that the server has stopped you should see
+your command prompt cursor again.</p>
 </blockquote>
-
-<p>As you can see, the syntax is very readable. We&#39;ll discuss the details
-in the next section.</p>
 
 <h2 id="3.3.-breaking-down-the-syntax">3.3. Breaking Down the Syntax</h2>
 
-<p>Now that we know how to build a minimal Cuba application, let&#39;s take a deeper
-look at the syntax. We can split this example into three parts:</p>
+<p>Now that we know how to build a minimal application, let&#39;s take a deeper
+look at the syntax.</p>
 
-<p>First, we require Cuba to load the gem and get access to
-its functionality.</p>
+<p>First, we load the Cuba gem to access its functionality.</p>
 
 <pre><code class="ruby">require &quot;cuba&quot;
 </code></pre>
 
-<p>Then we can identify four methods that appear in most Cuba
-applications: <code>define</code>, <code>on</code>, <code>root</code> and <code>res</code>.</p>
+<p>Then we see four methods that appear in most Cuba applications:</p>
 
 <pre><code class="ruby">Cuba.define do
   on root do
@@ -206,10 +201,7 @@ method to set the response body with the greeting message.</p></li>
 <pre><code class="ruby">run(Cuba)
 </code></pre>
 
-<p>Don&#39;t worry if you don&#39;t understand what Rack is just yet, we&#39;ll discuss
-it in the next section.</p>
-
-<h2 id="3.4.-rack-&amp;-roll!">3.4. Rack &amp; Roll!</h2>
+<h2 id="3.4.-rack">3.4. Rack</h2>
 
 <p>As we mentioned earlier, Cuba is built on top of Rack ... but what is Rack?</p>
 
@@ -219,8 +211,8 @@ to implement its own handler for each web server.</p>
 
 <p><img src="/img/book/rack.png" alt="rack"></p>
 
-<p>You didn&#39;t notice yet but we already used Rack. We used <code>rackup</code>, one of
-the tools that comes with Rack, to run our <strong>&quot;Hello Cuba!&quot;</strong> application.</p>
+<p>To run our <strong>&quot;Hello Cuba!&quot;</strong> application we used <code>rackup</code>, one of the tools
+that comes with Rack.</p>
 
 <p>To use <code>rackup</code>, you need to supply a config file (by convention it uses
 the <em>.ru</em> extension). This file connects the Rack interface with our
