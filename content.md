@@ -40,7 +40,8 @@ prerequisites installed:
 * The [Redis](http://redis.io) database. If you don't have Redis installed,
   you can follow the instructions in the [Redis download page](http://redis.io/download).
 
-> **NOTE:** All the code examples have been tested on OSX and Linux.
+You can find the code examples [here](https://github.com/frodsan/theguidetocuba.io/tree/gh-pages/code).
+They have all been tested on OSX and Linux.
 
 # 3. Welcome Aboard
 
