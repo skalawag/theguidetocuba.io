@@ -7,23 +7,23 @@ require "redcarpet"
 class Site
   include Mote::Helpers
 
-  def initialize(content)
-    @content = content
+  def initialize(markdown)
+    @markdown = markdown
   end
 
   def generate
-    return mote("templates/online.mote", content: markdown, toc: toc)
+    return mote("templates/online.mote", content: content, toc: toc)
   end
 
-  def markdown
+  def content
     options = { tables: true, fenced_code_blocks: true }
     renderer = Redcarpet::Render::HTML.new(with_toc_data: true)
 
-    return Redcarpet::Markdown.new(renderer, options).render(@content)
+    return Redcarpet::Markdown.new(renderer, options).render(@markdown)
   end
 
   def toc
-    return Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(@content)
+    return Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(@markdown)
   end
 end
 
