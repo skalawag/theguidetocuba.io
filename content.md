@@ -51,20 +51,20 @@ creation of the classical "Hello World" application.
 ## 3.1. What's Cuba?
 
 Cuba is one of the lightest option when it comes to web development
-in Ruby. Here are some core attributes that are good to mention:
+in Ruby. Here are some core attributes that are worth mentioning:
 
-* It's incredibly small, almost 170 lines of code. It can take you half hour
-  to read the code and understand Cuba from inside. This simplicity by design
-  makes Cuba easy to debug and very stable (no major changes since 2012).
+* It's incredibly small, 174 lines of code. This simplicity by design
+  makes Cuba easy to understand and debug, and very stable (no major
+  changes since 2012).
 
-* Like most web frameworks in Ruby, Cuba is built on top of Rack, the Ruby
+* Like most web frameworks in Ruby, Cuba is built on top of Rack, a Ruby
   webserver interface. Because of this, we have the benefits of existing
   libraries and a variety of web servers for free. Don't worry if you don't
   understand what Rack is just yet, we'll discuss it later.
 
-* It only does one thing and do it well, map HTTP requests. This gives us
-  the freedom to choose the proper tools depending on the job at hand. This
-  book will introduce other libraries that share the same design philosophy.
+* Cuba does one thing and does it well, handle HTTP requests. This gives us
+  the freedom to choose the appropiate tools for the job at hand. This book
+  will introduce other libraries that share the same design philosophy.
 
 * It is fast? [Yes, it is](https://github.com/luislavena/bench-micro).
 
