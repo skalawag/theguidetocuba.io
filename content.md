@@ -70,7 +70,7 @@ in Ruby. Here are some core attributes that are worth mentioning:
 
 ## 3.2. Hello Cuba!
 
-Before getting started, use the `gem` command to install Cuba:
+To get started, use the `gem` command to install Cuba:
 
 ```no-highlight
 $ gem install cuba
@@ -97,32 +97,27 @@ You already have a functional Cuba application! To see it in action, type
 
 ![rackup](/img/book/rackup.png)
 
-Now open a browser and navigate to <http://localhost:9292/>. It should
+Now open a browser and navigate to <http://localhost:9292>. It should
 show a greeting message as shown below:
 
 ![hello](/img/book/hello.png)
 
 > **NOTE:** To stop the web server, hit `Ctrl+C` in the terminal window
-where it's running. To verify the server has stopped you should see your
-command prompt cursor again.
-
-As you can see, the syntax is very readable. We'll discuss the details
-in the next section.
+where it's running. To verify that the server has stopped you should see
+your command prompt cursor again.
 
 ## 3.3. Breaking Down the Syntax
 
-Now that we know how to build a minimal Cuba application, let's take a deeper
-look at the syntax. We can split this example into three parts:
+Now that we know how to build a minimal application, let's take a deeper
+look at the syntax.
 
-First, we require Cuba to load the gem and get access to
-its functionality.
+First, we load the Cuba gem to access its functionality.
 
 ```ruby
 require "cuba"
 ```
 
-Then we can identify four methods that appear in most Cuba
-applications: `define`, `on`, `root` and `res`.
+Then we see four methods that appear in most Cuba applications:
 
 ```ruby
 Cuba.define do
@@ -148,10 +143,7 @@ Finally, the last line connects our application with Rack.
 run(Cuba)
 ```
 
-Don't worry if you don't understand what Rack is just yet, we'll discuss
-it in the next section.
-
-## 3.4. Rack & Roll!
+## 3.4. Rack
 
 As we mentioned earlier, Cuba is built on top of Rack ... but what is Rack?
 
@@ -161,8 +153,8 @@ to implement its own handler for each web server.
 
 ![rack](/img/book/rack.png)
 
-You didn't notice yet but we already used Rack. We used `rackup`, one of
-the tools that comes with Rack, to run our **"Hello Cuba!"** application.
+To run our **"Hello Cuba!"** application we used `rackup`, one of the tools
+that comes with Rack.
 
 To use `rackup`, you need to supply a config file (by convention it uses
 the *.ru* extension). This file connects the Rack interface with our
