@@ -93,8 +93,9 @@ end
 run(Cuba)
 ```
 
-You already have a functional Cuba application! To see it in action, type
-`rackup config.ru` in the command line.
+You already have a functional Cuba application! To see it in action, you
+need to start a web server. You can do this by typing `rackup config.ru`
+in the command line.
 
 ![rackup](/img/book/rackup.png)
 
