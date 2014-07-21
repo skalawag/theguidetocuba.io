@@ -144,7 +144,7 @@ Finally, the last line connects our application with Rack.
 run(Cuba)
 ```
 
-## 3.4. Rack
+## 3.4. Introduction to Rack
 
 As we mentioned earlier, Cuba is built on top of Rack ... but what is Rack?
 
