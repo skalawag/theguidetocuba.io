@@ -43,7 +43,7 @@ prerequisites installed:
 You can find the code examples [here](https://github.com/frodsan/theguidetocuba.io/tree/gh-pages/code).
 They have all been tested on OSX and Linux.
 
-# 3. Welcome Aboard
+# 3. Up and Running
 
 This first chapter focuses on the bare minimum you need to know to work
 with Cuba. We'll learn some of the core concepts walking through the
