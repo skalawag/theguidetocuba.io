@@ -182,3 +182,5 @@ $ rackup config.ru
 ```
 
 To read more about Rack, visit their home page: <http://rack.github.io/>.
+
+# 4.1 The Application Homepage
