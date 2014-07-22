@@ -196,6 +196,10 @@ application (<code>&quot;/&quot;</code> or <code>&quot;&quot;</code>).</p></li>
 method to set the response body with the greeting message.</p></li>
 </ul>
 
+<p>When we enter <a href="http://localhost:9292/">http://localhost:9292/</a>, our application checks if the
+accessed path is the root. Since this evaluates to <code>true</code>, it prints
+<em>&quot;Hello, Cuba!&quot;</em>.</p>
+
 <p>Finally, the last line connects our application with Rack.</p>
 
 <pre><code class="ruby">run(Cuba)
