@@ -139,6 +139,10 @@ end
 * `res` handles the server response. In this case, we use the `write`
   method to set the response body with the greeting message.
 
+When we enter <http://localhost:9292/>, our application checks if the
+accessed path is the root. Since this evaluates to `true`, it prints
+*"Hello, Cuba!"*.
+
 Finally, the last line connects our application with Rack.
 
 ```ruby
