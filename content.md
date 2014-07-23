@@ -110,16 +110,16 @@ your command prompt cursor again.
 
 ## 3.3. Breaking Down the Syntax
 
-Now that we know how to build a minimal application, let's take a deeper
+Now that you know how to build a minimal application, let's take a deeper
 look at the syntax.
 
-First, we load the Cuba gem to access its functionality.
+First, you load the Cuba gem to access its functionality.
 
 ```ruby
 require "cuba"
 ```
 
-Then we see four methods that appear in most Cuba applications:
+Then you can see four methods that appear in most Cuba applications:
 
 ```ruby
 Cuba.define do
@@ -136,10 +136,10 @@ end
 * `root` returns `true` if the accessed path is the root of the
   application (`"/"` or `""`).
 
-* `res` handles the server response. In this case, we use the `write`
+* `res` handles the server response. In this case, you use the `write`
   method to set the response body with the greeting message.
 
-When we enter <http://localhost:9292/>, our application checks if the
+When you enter <http://localhost:9292/>, our application checks if the
 accessed path is the root. Since this evaluates to `true`, it prints
 *"Hello, Cuba!"*.
 
@@ -159,7 +159,7 @@ to implement its own handler for each web server.
 
 ![rack](/img/book/rack.png)
 
-To run our **"Hello Cuba!"** application we used `rackup`, one of the tools
+To run our **"Hello Cuba!"** application you used `rackup`, one of the tools
 that comes with Rack.
 
 To use `rackup`, you need to supply a config file (by convention it uses
