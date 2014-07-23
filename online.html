@@ -240,7 +240,24 @@ built into Ruby by default.</p>
 
 <p>To read more about Rack, visit their home page: <a href="http://rack.github.io/">http://rack.github.io/</a>.</p>
 
+<p>Now that we known the basics of Cuba and Rack, we&#39;re ready to put it to work.
+By following the next chapters, you are going to build a Twitter clone called
+<em>Frogger</em>.</p>
+
 <h1 id="4.1-the-application-homepage">4.1 The Application Homepage</h1>
+
+<p>Something that we didn&#39;t see in the last chapter is that it&#39;s also easy to
+render a piece of HTML with Cuba. If we change the above example and add a
+<code>&lt;h1&gt;</code> header like this:</p>
+
+<pre><code class="ruby">require &quot;cuba&quot;
+
+Cuba.define do
+  on root do
+    res.write(&quot;&lt;h1&gt;Hello, Cuba!&lt;/h1&gt;&quot;)
+  end
+end
+</code></pre>
 
       </section>
     </section>
