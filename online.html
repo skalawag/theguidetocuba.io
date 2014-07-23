@@ -140,7 +140,7 @@ will introduce other libraries that share the same design philosophy.</p></li>
 </code></pre>
 
 <p>Now that Cuba is installed, it&#39;s easy to create an application. Open
-your text editor of preference and create a file called <code>config.ru</code> with
+your text editor of preference and create a file called <code>app.rb</code> with
 the following code:</p>
 
 <pre><code class="ruby">require &quot;cuba&quot;
@@ -150,6 +150,11 @@ Cuba.define do
     res.write(&quot;Hello, Cuba!&quot;)
   end
 end
+</code></pre>
+
+<p>Then create another one called <code>config.ru</code> with the contents shown below:</p>
+
+<pre><code class="ruby">require &quot;./app&quot;
 
 run(Cuba)
 </code></pre>
@@ -160,16 +165,16 @@ in the command line.</p>
 
 <p><img src="/img/book/rackup.png" alt="rackup"></p>
 
-<p>Now open a browser and navigate to <a href="http://localhost:9292">http://localhost:9292</a>. It should
-show a greeting message as shown below:</p>
-
-<p><img src="/img/book/hello.png" alt="hello"></p>
-
 <blockquote>
 <p><strong>NOTE:</strong> To stop the web server, hit <code>Ctrl+C</code> in the terminal window
 where it&#39;s running. To verify that the server has stopped you should see
 your command prompt cursor again.</p>
 </blockquote>
+
+<p>Now open the browser and navigate to <a href="http://localhost:9292">http://localhost:9292</a> to see the
+greeting message:</p>
+
+<p><img src="/img/book/hello.png" alt="hello"></p>
 
 <h2 id="3.3.-breaking-down-the-syntax">3.3. Breaking Down the Syntax</h2>
 
@@ -199,14 +204,9 @@ application (<code>&quot;/&quot;</code> or <code>&quot;&quot;</code>).</p></li>
 method to set the response body with the greeting message.</p></li>
 </ul>
 
-<p>When you enter <a href="http://localhost:9292/">http://localhost:9292/</a>, our application checks if the
+<p>When you enter <a href="http://localhost:9292/">http://localhost:9292/</a>, the application checks if the
 accessed path is the root. Since this evaluates to <code>true</code>, it prints
 <em>&quot;Hello, Cuba!&quot;</em>.</p>
-
-<p>Finally, the last line connects our application with Rack.</p>
-
-<pre><code class="ruby">run(Cuba)
-</code></pre>
 
 <h2 id="3.4.-introduction-to-rack">3.4. Introduction to Rack</h2>
 
@@ -218,27 +218,28 @@ to implement its own handler for each web server.</p>
 
 <p><img src="/img/book/rack.png" alt="rack"></p>
 
-<p>To run our <strong>&quot;Hello Cuba!&quot;</strong> application you used <code>rackup</code>, one of the tools
+<p>To run the <strong>&quot;Hello Cuba!&quot;</strong> application you used <code>rackup</code>, one of the tools
 that comes with Rack.</p>
 
-<p>To use <code>rackup</code>, you need to supply a config file (by convention it uses
-the <em>.ru</em> extension). This file connects the Rack interface with our
-application through the <code>run</code> method. This method receives an object that
-returns a Rack response. In our case, that object is our Cuba application:</p>
+<p>To use <code>rackup</code>, you need to supply a <code>config.ru</code> file. This file connects
+the Rack interface with the application through the <code>run</code> method. This method
+receives an object that returns a Rack response. In this case, that object is
+the Cuba application:</p>
 
 <pre><code class="ruby">run(Cuba)
 </code></pre>
 
 <p><code>rackup</code> also figures out which server you have available. When we
-executed <code>rackup config.ru</code>, it fired up <em>WEBrick</em>, a web server
-built into Ruby by default.</p>
+use <code>rackup</code>, it fires up <em>WEBrick</em>, a web server built into Ruby
+by default.</p>
 
 <pre><code class="no-highlight">$ rackup config.ru
 [2014-05-06 23:37:23] INFO  WEBrick 1.3.1
 ...
 </code></pre>
 
-<p>To read more about Rack, visit their home page: <a href="http://rack.github.io/">http://rack.github.io/</a>.</p>
+<p>You can read more about Rack visiting their home page:
+<a href="http://rack.github.io/">http://rack.github.io/</a>.</p>
 
 <p>Now that we known the basics of Cuba and Rack, we&#39;re ready to put it to work.
 By following the next chapters, you are going to build a Twitter clone called
