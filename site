@@ -11,8 +11,10 @@ class Site
     return sprintf(template, content: content, toc: toc)
   end
 
+  private
+
   def template
-    File.read("templates/online.html")
+    return File.read("templates/online.html")
   end
 
   def content
