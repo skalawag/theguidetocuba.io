@@ -188,9 +188,36 @@ You can read more about Rack visiting their home page:
 
 Now that we known the basics of Cuba and Rack, we're ready to put it to work.
 By following the next chapters, you are going to build a Twitter clone called
-*Frogger*.
+*Frogger*, but first, let's have a look at some basic tools that will make
+your development experience more pleasant.
 
 ## 4.1 Managing Dependencies
+
+In every web application, there are common tasks that you need to do
+(e.g authenticate users or query a database). Libraries are useful for
+not reinventing the wheel, and in Ruby they are often referred to as
+*gems*.
+
+Ruby uses [Rubygems](https://rubygems.org/) to distribute them and to
+ease the installation. Installing Cuba was as easy as typing
+`gem install cuba` in the command line.
+
+Even though Rubygems is useful when installing gems, it has its
+limitations. Unfortunately, it installs all gems globally. This means
+that if you have different versions of a gem installed, you have to
+make sure that you require the right version for your project.
+
+We need a way to keep track of the dependencies and install the right version
+of each one. This is where [gs](https://github.com/soveran/gs) and
+[dep](https://github.com/cyx/dep) come to the rescue.
+
+### 4.1.1. gs
+
+With gs you can create a *gemset* for each project. A gemset is an isolated
+space to install gems. By providing each project with their own gemset, you
+can be sure that the right version of a gem is loaded.
+
+### 4.1.2 dep
 
 ## 4.2 Shotgun
 
