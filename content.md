@@ -184,11 +184,19 @@ $ rackup config.ru
 You can read more about Rack visiting their home page:
 <http://rack.github.io/>.
 
+# 4. Setting Up the Project
+
 Now that we known the basics of Cuba and Rack, we're ready to put it to work.
 By following the next chapters, you are going to build a Twitter clone called
 *Frogger*.
 
-# 4.1 The Application Homepage
+## 4.1 Managing Dependencies
+
+## 4.2 Shotgun
+
+## 4.3 Making a Basic Task
+
+# 5. The Application Homepage
 
 Something that we didn't see in the last chapter is that it's also easy to
 render a piece of HTML with Cuba. If you change the above example and add a
