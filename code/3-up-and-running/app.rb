@@ -2,6 +2,6 @@ require "cuba"
 
 Cuba.define do
   on root do
-    res.write("Hello, Cuba!")
+    res.write("<h1>Hello, Cuba!</h1>")
   end
 end

@@ -1,3 +1,3 @@
-reuire "./app"
+require "./app"
 
 run(Cuba)

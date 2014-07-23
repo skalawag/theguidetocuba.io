@@ -248,7 +248,7 @@ By following the next chapters, you are going to build a Twitter clone called
 <h1 id="4.1-the-application-homepage">4.1 The Application Homepage</h1>
 
 <p>Something that we didn&#39;t see in the last chapter is that it&#39;s also easy to
-render a piece of HTML with Cuba. If we change the above example and add a
+render a piece of HTML with Cuba. If you change the above example and add a
 <code>&lt;h1&gt;</code> header like this:</p>
 
 <pre><code class="ruby">require &quot;cuba&quot;
@@ -259,6 +259,35 @@ Cuba.define do
   end
 end
 </code></pre>
+
+<p>Restart the server, refresh the page and you&#39;ll see the greeting displayed
+as a HTML header.</p>
+
+<p><img src="/img/book/hello2.png" alt="hello2"></p>
+
+<p>Suppose you have to write a big chunk of HTML code. It can be written
+like this:</p>
+
+<pre><code class="ruby">Cuba.define do
+  on root do
+    res.write(&quot;
+      &lt;html&gt;
+        &lt;body&gt;
+          &lt;!-- ... --&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    &quot;)
+  end
+end
+</code></pre>
+
+<p>The problem with this approach is that it&#39;s hard to reuse parts of the HTML
+that every page uses, for example a navigation menu or a footer. Therefore, we
+separate it into <em>views</em>, which are templates that gets converted to HTML and
+sent back to the browser.</p>
+
+<p>In this chapter, you&#39;ll learn how to use <a href="https://github.com/soveran/mote">Mote</a>,
+a minimal template engine to render views.</p>
 
       </section>
     </section>
