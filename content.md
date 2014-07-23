@@ -78,7 +78,7 @@ $ gem install cuba
 ```
 
 Now that Cuba is installed, it's easy to create an application. Open
-your text editor of preference and create a file called `config.ru` with
+your text editor of preference and create a file called `app.rb` with
 the following code:
 
 ```ruby
@@ -89,6 +89,12 @@ Cuba.define do
     res.write("Hello, Cuba!")
   end
 end
+```
+
+Then create another one called `config.ru` with the contents shown below:
+
+```ruby
+require "./app"
 
 run(Cuba)
 ```
@@ -99,14 +105,14 @@ in the command line.
 
 ![rackup](/img/book/rackup.png)
 
-Now open a browser and navigate to <http://localhost:9292>. It should
-show a greeting message as shown below:
-
-![hello](/img/book/hello.png)
-
 > **NOTE:** To stop the web server, hit `Ctrl+C` in the terminal window
 where it's running. To verify that the server has stopped you should see
 your command prompt cursor again.
+
+Now open the browser and navigate to <http://localhost:9292> to see the
+greeting message:
+
+![hello](/img/book/hello.png)
 
 ## 3.3. Breaking Down the Syntax
 
@@ -139,15 +145,9 @@ end
 * `res` handles the server response. In this case, you use the `write`
   method to set the response body with the greeting message.
 
-When you enter <http://localhost:9292/>, our application checks if the
+When you enter <http://localhost:9292/>, the application checks if the
 accessed path is the root. Since this evaluates to `true`, it prints
 *"Hello, Cuba!"*.
-
-Finally, the last line connects our application with Rack.
-
-```ruby
-run(Cuba)
-```
 
 ## 3.4. Introduction to Rack
 
@@ -159,21 +159,21 @@ to implement its own handler for each web server.
 
 ![rack](/img/book/rack.png)
 
-To run our **"Hello Cuba!"** application you used `rackup`, one of the tools
+To run the **"Hello Cuba!"** application you used `rackup`, one of the tools
 that comes with Rack.
 
-To use `rackup`, you need to supply a config file (by convention it uses
-the *.ru* extension). This file connects the Rack interface with our
-application through the `run` method. This method receives an object that
-returns a Rack response. In our case, that object is our Cuba application:
+To use `rackup`, you need to supply a `config.ru` file. This file connects
+the Rack interface with the application through the `run` method. This method
+receives an object that returns a Rack response. In this case, that object is
+the Cuba application:
 
 ```ruby
 run(Cuba)
 ```
 
 `rackup` also figures out which server you have available. When we
-executed `rackup config.ru`, it fired up *WEBrick*, a web server
-built into Ruby by default.
+use `rackup`, it fires up *WEBrick*, a web server built into Ruby
+by default.
 
 ```no-highlight
 $ rackup config.ru
@@ -181,7 +181,8 @@ $ rackup config.ru
 ...
 ```
 
-To read more about Rack, visit their home page: <http://rack.github.io/>.
+You can read more about Rack visiting their home page:
+<http://rack.github.io/>.
 
 Now that we known the basics of Cuba and Rack, we're ready to put it to work.
 By following the next chapters, you are going to build a Twitter clone called
