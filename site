@@ -1,18 +1,18 @@
 #!/usr/bin/env ruby
 
-require "json"
-require "mote"
 require "redcarpet"
 
 class Site
-  include Mote::Helpers
-
   def initialize(markdown)
     @markdown = markdown
   end
 
   def generate
-    return mote("templates/online.mote", content: content, toc: toc)
+    return sprintf(template, content: content, toc: toc)
+  end
+
+  def template
+    File.read("templates/online.html")
   end
 
   def content
