@@ -183,4 +183,22 @@ $ rackup config.ru
 
 To read more about Rack, visit their home page: <http://rack.github.io/>.
 
+Now that we known the basics of Cuba and Rack, we're ready to put it to work.
+By following the next chapters, you are going to build a Twitter clone called
+*Frogger*.
+
 # 4.1 The Application Homepage
+
+Something that we didn't see in the last chapter is that it's also easy to
+render a piece of HTML with Cuba. If we change the above example and add a
+`<h1>` header like this:
+
+```ruby
+require "cuba"
+
+Cuba.define do
+  on root do
+    res.write("<h1>Hello, Cuba!</h1>")
+  end
+end
+```
