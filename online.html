@@ -324,12 +324,33 @@ can be sure that the right version of a gem is loaded.</p>
 <pre><code class="no-highlight">$ gs init
 </code></pre>
 
-<p>This command does two things. First, it creates a directory <code>.gs</code>, where
-the dependencies for the project are going to be installed. Secondly, it
-starts a shell session and set the <code>.gs</code> folder as the path where Ruby will
-look for these dependencies.</p>
+<p>This command creates a directory <code>.gs</code> and starts a shell session. In this
+session, all gems will be installed locally in the <code>.gs</code> folder.</p>
 
 <h3 id="4.1.2-dep">4.1.2 dep</h3>
+
+<p>Now that we created a gemset, you will use <em>dep</em> to keep track of the project
+dependencies.</p>
+
+<p>dep uses a <code>.gems</code> file to list the required dependencies with their version
+number. This file will be created automotically the first time you add a
+gem to the list.</p>
+
+<p>To add Cuba to this list, use:</p>
+
+<pre><code class="no-highlight">$ dep add cuba
+</code></pre>
+
+<p>This fetches the latest version of the gem and adds it to yours <code>.gems</code> file.
+Let&#39;s have a look at what the file looks like after adding the Cuba gem:</p>
+
+<pre><code class="no-highlight">cuba -v 3.1.1
+</code></pre>
+
+<p>To install the gems on the list in the <code>.gs</code> folder, do:</p>
+
+<pre><code class="no-highlight">$ dep install
+</code></pre>
 
 <h2 id="4.2-shotgun">4.2 Shotgun</h2>
 
