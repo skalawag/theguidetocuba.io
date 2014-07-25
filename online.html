@@ -267,8 +267,26 @@ by default.</p>
 
 <p>Now that we known the basics of Cuba and Rack, we&#39;re ready to put it to work.
 By following the next chapters, you are going to build a Twitter clone called
-<em>Frogger</em>, but first, let&#39;s have a look at some basic tools that will make
-your development experience more pleasant.</p>
+<em>Frogger</em>.</p>
+
+<p>The first thing you need to do is to create the project folder. You can create
+it by writing the following command in your terminal:</p>
+
+<pre><code class="no-highlight">$ mkdir frogger
+</code></pre>
+
+<p>Afterwards, switch to the project folder:</p>
+
+<pre><code class="no-highlight">$ cd frogger
+</code></pre>
+
+<blockquote>
+<p>NOTE: From now on, all the command line instructions shown in this book
+must be executed in this directory.</p>
+</blockquote>
+
+<p>Now let&#39;s have a look at some tools you&#39;ll use to make your development
+experience more pleasant.</p>
 
 <h2 id="4.1-managing-dependencies">4.1 Managing Dependencies</h2>
 
@@ -287,7 +305,7 @@ that if you have different versions of a gem installed, you have to
 make sure that you require the right version for your project.</p>
 
 <p>We need a way to keep track of the dependencies and install the right version
-of each one. This is where <a href="https://github.com/soveran/gs">gs</a> and
+of each one. This is where tools like <a href="https://github.com/soveran/gs">gs</a> and
 <a href="https://github.com/cyx/dep">dep</a> come to the rescue.</p>
 
 <h3 id="4.1.1.-gs">4.1.1. gs</h3>
@@ -295,6 +313,11 @@ of each one. This is where <a href="https://github.com/soveran/gs">gs</a> and
 <p>With gs you can create a <em>gemset</em> for each project. A gemset is an isolated
 space to install gems. By providing each project with their own gemset, you
 can be sure that the right version of a gem is loaded.</p>
+
+<p>To install gs, do:</p>
+
+<pre><code class="no-highlight">$ gem install gs
+</code></pre>
 
 <h3 id="4.1.2-dep">4.1.2 dep</h3>
 
