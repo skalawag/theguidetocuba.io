@@ -20,7 +20,7 @@ Here's a list of pages that uses Cuba for inspiration:
 
 - [AT&T’s M2X](https://m2x.att.com)
 - [Educabilia](http://educabilia.com)
-- [Open Redis](https://openredis.com)
+- [openredis](https://openredis.com)
 - [jobs.punchgirls.com](https://jobs.punchgirls.com)
 - [Redis homepage](http://redis.io)
 
