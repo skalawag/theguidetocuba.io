@@ -188,8 +188,26 @@ You can read more about Rack visiting their home page:
 
 Now that we known the basics of Cuba and Rack, we're ready to put it to work.
 By following the next chapters, you are going to build a Twitter clone called
-*Frogger*, but first, let's have a look at some basic tools that will make
-your development experience more pleasant.
+*Frogger*.
+
+The first thing you need to do is to create the project folder. You can create
+it by writing the following command in your terminal:
+
+```no-highlight
+$ mkdir frogger
+```
+
+Afterwards, switch to the project folder:
+
+```no-highlight
+$ cd frogger
+```
+
+> NOTE: From now on, all the command line instructions shown in this book
+must be executed in this directory.
+
+Now let's have a look at some tools you'll use to make your development
+experience more pleasant.
 
 ## 4.1 Managing Dependencies
 
@@ -208,7 +226,7 @@ that if you have different versions of a gem installed, you have to
 make sure that you require the right version for your project.
 
 We need a way to keep track of the dependencies and install the right version
-of each one. This is where [gs](https://github.com/soveran/gs) and
+of each one. This is where tools like [gs](https://github.com/soveran/gs) and
 [dep](https://github.com/cyx/dep) come to the rescue.
 
 ### 4.1.1. gs
@@ -217,7 +235,57 @@ With gs you can create a *gemset* for each project. A gemset is an isolated
 space to install gems. By providing each project with their own gemset, you
 can be sure that the right version of a gem is loaded.
 
+To install gs, do:
+
+```no-highlight
+$ gem install gs
+```
+
+Creating a new gemset is as easy as typing:
+
+```no-highlight
+$ gs init
+```
+
+This command creates a directory `.gs` and starts a shell session. In this
+session, all gems will be installed locally in the `.gs` folder.
+
 ### 4.1.2 dep
+
+Now that we created a gemset, you will use *dep* to keep track of the project
+dependencies.
+
+dep uses a `.gems` file to list the required gems with their version
+number. This file will be created automotically the first time you add a
+gem to the list.
+
+To add Cuba to this list, use:
+
+```no-highlight
+$ dep add cuba
+```
+
+This fetches the latest version of the gem and adds it to yours `.gems` file.
+Let's have a look at what the file looks like after adding the Cuba gem:
+
+```no-highlight
+cuba -v 3.1.1
+```
+
+To install the listed gems in the `.gs` folder, do:
+
+```no-highlight
+$ dep install
+```
+
+To check that they're installed, use:
+
+```no-highlight
+$ dep
+dep: all cool
+```
+
+If all is cool, you're good to go!
 
 ## 4.2 Shotgun
 
