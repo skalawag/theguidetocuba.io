@@ -209,7 +209,7 @@ must be executed in this directory.
 Now let's have a look at some tools you'll use to make your development
 experience more pleasant.
 
-## 4.1 Managing Dependencies
+# 5. Managing Dependencies
 
 In every web application, there are common tasks that you need to do
 (e.g authenticate users or query a database). Libraries are useful for
@@ -229,7 +229,7 @@ We need a way to keep track of the dependencies and install the right version
 of each one. This is where tools like [gs](https://github.com/soveran/gs) and
 [dep](https://github.com/cyx/dep) come to the rescue.
 
-### 4.1.1. gs
+## 5.1. gs
 
 With gs you can create a *gemset* for each project. A gemset is an isolated
 space to install gems. By providing each project with their own gemset, you
@@ -250,7 +250,7 @@ $ gs init
 This command creates a directory `.gs` and starts a shell session. In this
 session, all gems will be installed locally in the `.gs` folder.
 
-### 4.1.2 dep
+## 5.2. dep
 
 Now that we created a gemset, you will use *dep* to keep track of the project
 dependencies.
@@ -287,13 +287,9 @@ dep: all cool
 
 If all is cool, you're good to go!
 
-## 4.2 Shotgun
+# 6. The Application Homepage
 
-## 4.3 Making a Basic Task
-
-# 5. The Application Homepage
-
-Something that we didn't see in the last chapter is that it's also easy to
+Something that we didn't see in the first chapter is that it's also easy to
 render a piece of HTML with Cuba. If you change the above example and add a
 `<h1>` header like this:
 
