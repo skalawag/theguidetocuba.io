@@ -51,28 +51,20 @@
 </li>
 <li>
 <a href="#4.-setting-up-the-project">4. Setting Up the Project</a>
-<ul>
-<li>
-<a href="#4.1.-managing-dependencies">4.1. Managing Dependencies</a>
-<ul>
-<li>
-<a href="#4.1.1.-gs">4.1.1. gs</a>
 </li>
 <li>
-<a href="#4.1.2.-dep">4.1.2. dep</a>
+<a href="#5.-managing-dependencies">5. Managing Dependencies</a>
+<ul>
+<li>
+<a href="#5.1.-gs">5.1. gs</a>
+</li>
+<li>
+<a href="#5.2.-dep">5.2. dep</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#4.2.-reloading-the-application">4.2. Reloading the Application</a>
-</li>
-<li>
-<a href="#4.3.-making-a-basic-task">4.3. Making a Basic Task</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#5.-the-application-homepage">5. The Application Homepage</a>
+<a href="#6.-the-application-homepage">6. The Application Homepage</a>
 </li>
 </ul>
 
@@ -288,7 +280,7 @@ must be executed in this directory.</p>
 <p>Now let&#39;s have a look at some tools you&#39;ll use to make your development
 experience more pleasant.</p>
 
-<h2 id="4.1.-managing-dependencies">4.1. Managing Dependencies</h2>
+<h1 id="5.-managing-dependencies">5. Managing Dependencies</h1>
 
 <p>In every web application, there are common tasks that you need to do
 (e.g authenticate users or query a database). Libraries are useful for
@@ -308,7 +300,7 @@ make sure that you require the right version for your project.</p>
 of each one. This is where tools like <a href="https://github.com/soveran/gs">gs</a> and
 <a href="https://github.com/cyx/dep">dep</a> come to the rescue.</p>
 
-<h3 id="4.1.1.-gs">4.1.1. gs</h3>
+<h2 id="5.1.-gs">5.1. gs</h2>
 
 <p>With gs you can create a <em>gemset</em> for each project. A gemset is an isolated
 space to install gems. By providing each project with their own gemset, you
@@ -327,7 +319,7 @@ can be sure that the right version of a gem is loaded.</p>
 <p>This command creates a directory <code>.gs</code> and starts a shell session. In this
 session, all gems will be installed locally in the <code>.gs</code> folder.</p>
 
-<h3 id="4.1.2.-dep">4.1.2. dep</h3>
+<h2 id="5.2.-dep">5.2. dep</h2>
 
 <p>Now that we created a gemset, you will use <em>dep</em> to keep track of the project
 dependencies.</p>
@@ -360,13 +352,9 @@ dep: all cool
 
 <p>If all is cool, you&#39;re good to go!</p>
 
-<h2 id="4.2.-reloading-the-application">4.2. Reloading the Application</h2>
+<h1 id="6.-the-application-homepage">6. The Application Homepage</h1>
 
-<h2 id="4.3.-making-a-basic-task">4.3. Making a Basic Task</h2>
-
-<h1 id="5.-the-application-homepage">5. The Application Homepage</h1>
-
-<p>Something that we didn&#39;t see in the last chapter is that it&#39;s also easy to
+<p>Something that we didn&#39;t see in the first chapter is that it&#39;s also easy to
 render a piece of HTML with Cuba. If you change the above example and add a
 <code>&lt;h1&gt;</code> header like this:</p>
 
