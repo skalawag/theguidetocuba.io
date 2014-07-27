@@ -43,13 +43,34 @@ prerequisites installed:
 You can find the code examples [here](https://github.com/frodsan/theguidetocuba.io/tree/gh-pages/code).
 They have all been tested on OSX and Linux.
 
-# 3. Up and Running
+# 3. Setting Up the Project
+
+By following the next chapters, you are going to build a Twitter clone called
+*Frogger*.
+
+The first thing you need to do is to create the project folder. You can create
+it by writing the following command in your terminal:
+
+```no-highlight
+$ mkdir frogger
+```
+
+Afterwards, switch to the project folder:
+
+```no-highlight
+$ cd frogger
+```
+
+> NOTE: From now on, all the command line instructions shown in this book
+must be executed in this directory.
+
+# 4. Up and Running
 
 This first chapter focuses on the bare minimum you need to know to work
 with Cuba. We'll learn some of the core concepts walking through the
 creation of the classical "Hello World" application.
 
-## 3.1. What's Cuba?
+## 4.1. What's Cuba?
 
 Cuba is one of the lightest option when it comes to web development
 in Ruby. Here are some core attributes that are worth mentioning:
@@ -69,7 +90,7 @@ in Ruby. Here are some core attributes that are worth mentioning:
 
 * It is fast? [Yes, it is](https://github.com/luislavena/bench-micro).
 
-## 3.2. Hello Cuba!
+## 4.2. Hello Frogger!
 
 To get started, use the `gem` command to install Cuba:
 
@@ -86,7 +107,7 @@ require "cuba"
 
 Cuba.define do
   on root do
-    res.write("Hello, Cuba!")
+    res.write("Hello Frogger!")
   end
 end
 ```
@@ -130,7 +151,7 @@ Then you can see four methods that appear in most Cuba applications:
 ```ruby
 Cuba.define do
   on root do
-    res.write("Hello, Cuba!")
+    res.write("Hello Frogger!")
   end
 end
 ```
@@ -147,7 +168,7 @@ end
 
 When you enter <http://localhost:9292/>, the application checks if the
 accessed path is the root. Since this evaluates to `true`, it prints
-*"Hello, Cuba!"*.
+*"Hello Frogger!"*.
 
 ## 3.4. Introduction to Rack
 
@@ -159,7 +180,7 @@ to implement its own handler for each web server.
 
 ![rack](/img/book/rack.png)
 
-To run the **"Hello Cuba!"** application you used `rackup`, one of the tools
+To run the hello world application you used `rackup`, one of the tools
 that comes with Rack.
 
 To use `rackup`, you need to supply a `config.ru` file. This file connects
@@ -183,31 +204,6 @@ $ rackup config.ru
 
 You can read more about Rack visiting their home page:
 <http://rack.github.io/>.
-
-# 4. Setting Up the Project
-
-Now that we known the basics of Cuba and Rack, we're ready to put it to work.
-By following the next chapters, you are going to build a Twitter clone called
-*Frogger*.
-
-The first thing you need to do is to create the project folder. You can create
-it by writing the following command in your terminal:
-
-```no-highlight
-$ mkdir frogger
-```
-
-Afterwards, switch to the project folder:
-
-```no-highlight
-$ cd frogger
-```
-
-> NOTE: From now on, all the command line instructions shown in this book
-must be executed in this directory.
-
-Now let's have a look at some tools you'll use to make your development
-experience more pleasant.
 
 # 5. Managing Dependencies
 
