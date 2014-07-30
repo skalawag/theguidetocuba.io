@@ -350,26 +350,9 @@ dep: all cool
 
 <h1 id="6.-the-application-homepage">6. The Application Homepage</h1>
 
-<p>Something that we didn&#39;t see in the first chapter is that it&#39;s also easy to
-render a piece of HTML with Cuba. If you change the above example and add a
-<code>&lt;h1&gt;</code> header like this:</p>
-
-<pre><code class="ruby">require &quot;cuba&quot;
-
-Cuba.define do
-  on root do
-    res.write(&quot;&lt;h1&gt;Hello, Cuba!&lt;/h1&gt;&quot;)
-  end
-end
-</code></pre>
-
-<p>Restart the server, refresh the page and you&#39;ll see the greeting displayed
-as a HTML header.</p>
-
-<p><img src="/img/book/hello2.png" alt="hello2"></p>
-
-<p>Suppose you have to write a big chunk of HTML code. It can be written
-like this:</p>
+<p>It&#39;s time to replace the greeting message with the application&#39;s home page.
+To do that, we need to change the code to return HTML. The code can be
+written like this:</p>
 
 <pre><code class="ruby">Cuba.define do
   on root do
@@ -384,13 +367,15 @@ like this:</p>
 end
 </code></pre>
 
-<p>The problem with this approach is that it&#39;s hard to reuse parts of the HTML
-that every page uses, for example a navigation menu or a footer. Therefore, we
-separate it into <em>views</em>, which are templates that gets converted to HTML and
+<p>This approach can get very cluttered, specially when there are parts of HTML
+that every page uses (e.g. a navigation menu or a footer) or when there
+is content that needs to be dinamically generated. Therefore we separate
+it into <em>views</em>, which are template files that gets converted to HTML and
 sent back to the browser.</p>
 
-<p>In this chapter, you&#39;ll learn how to use <a href="https://github.com/soveran/mote">Mote</a>,
-a minimal template engine to render views.</p>
+<p>In this chapter, you&#39;ll learn how to organize and render views in the
+application using <a href="https://github.com/soveran/mote">mote</a>, a minimal
+template engine.</p>
 
       </section>
     </section>
