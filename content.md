@@ -285,9 +285,8 @@ If all is cool, you're good to go!
 
 # 6. The Application Homepage
 
-It's time to replace the greeting message with the application's home page.
-To do that, we need to change the code to return HTML. The code can be
-written like this:
+It's time to replace the greeting message with a nice homepage. To do that, we
+need to change the code to return HTML. It can be written like this:
 
 ```ruby
 Cuba.define do
@@ -303,12 +302,9 @@ Cuba.define do
 end
 ```
 
-This approach can get very cluttered, specially when there are parts of HTML
-that every page uses (e.g. a navigation menu or a footer) or when there
-is content that needs to be dinamically generated. Therefore we separate
-it into *views*, which are template files that gets converted to HTML and
-sent back to the browser.
+This approach can get very messy, especially when you need to generate content
+dinamically (e.g. a user's timeline), or parts of the HTML are repeated on every
+page (e.g. a navigation menu). Therefore we separate it into *views*, which are
+template files that gets converted to HTML and sent back to the browser.
 
-In this chapter, you'll learn how to organize and render views in the
-application using [mote](https://github.com/soveran/mote), a minimal
-template engine.
+In this chapter, you'll learn how to render and organize views.
