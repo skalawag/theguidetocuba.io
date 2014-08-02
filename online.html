@@ -350,9 +350,8 @@ dep: all cool
 
 <h1 id="6.-the-application-homepage">6. The Application Homepage</h1>
 
-<p>It&#39;s time to replace the greeting message with the application&#39;s home page.
-To do that, we need to change the code to return HTML. The code can be
-written like this:</p>
+<p>It&#39;s time to replace the greeting message with a nice homepage. To do that, we
+need to change the code to return HTML. It can be written like this:</p>
 
 <pre><code class="ruby">Cuba.define do
   on root do
@@ -367,15 +366,12 @@ written like this:</p>
 end
 </code></pre>
 
-<p>This approach can get very cluttered, specially when there are parts of HTML
-that every page uses (e.g. a navigation menu or a footer) or when there
-is content that needs to be dinamically generated. Therefore we separate
-it into <em>views</em>, which are template files that gets converted to HTML and
-sent back to the browser.</p>
+<p>This approach can get very messy, especially when you need to generate content
+dinamically (e.g. a user&#39;s timeline), or parts of the HTML are repeated on every
+page (e.g. a navigation menu). Therefore we separate it into <em>views</em>, which are
+template files that gets converted to HTML and sent back to the browser.</p>
 
-<p>In this chapter, you&#39;ll learn how to organize and render views in the
-application using <a href="https://github.com/soveran/mote">mote</a>, a minimal
-template engine.</p>
+<p>In this chapter, you&#39;ll learn how to render and organize views.</p>
 
       </section>
     </section>
