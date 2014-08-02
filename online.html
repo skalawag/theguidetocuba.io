@@ -382,34 +382,30 @@ a minimal template engine to render views.</p>
 <h2 id="6.1-mote">6.1 Mote</h2>
 
 <p>Mote is a fast template engine that allows us to put Ruby code into any
-plain text document, like HTML. A very simple example is this:</p>
-
-<pre><code class="ruby">require &quot;mote&quot;
-
-template = Mote.parse(&quot;The value of π is {{ Math::PI }}&quot;)
-template.call # =&gt; &quot;The value of π is 3.141592653589793&quot;
-</code></pre>
+plain text document, like HTML.</p>
 
 <p>Mote recognizes two tags to evaluate Ruby code: <code>%</code> and <code>{{}}</code>.
 The difference between them is that while the <code>%</code> tag only evaluates
 the code, the <code>{{}}</code> tag also prints the result to the template.</p>
 
-<p>The next example shows a list of different use cases you may face:</p>
+<p>Imagine that your template looks like this:</p>
 
-<pre><code class="html">% # This is a comment.
-% x = 2
-% y = 1
+<pre><code class="html">% gems = [&quot;rack&quot;, &quot;cuba&quot;, &quot;mote&quot;]
 
-&lt;p&gt;The value of x is {{ x }}&lt;/p&gt;
-&lt;p&gt;The value of y is {{ y }}&lt;/p&gt;
-&lt;p&gt;The sum of x and y is {{ x + y }}&lt;/p&gt;
+&lt;ul&gt;
+% gems.sort.each do |gem|
+  &lt;li&gt;{{ gem }}&lt;/li&gt;
+% end
+&lt;/ul&gt;
 </code></pre>
 
-<p>Following the above example, the printed result will be:</p>
+<p>The generated result will be:</p>
 
-<pre><code class="html">&lt;p&gt;The value of x is 2&lt;/p&gt;
-&lt;p&gt;The value of y is 1&lt;/p&gt;
-&lt;p&gt;The sum of x and y is 3&lt;/p&gt;
+<pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;cuba&lt;/li&gt;
+  &lt;li&gt;mote&lt;/li&gt;
+  &lt;li&gt;rack&lt;/li&gt;
+&lt;/ul&gt;
 </code></pre>
 
       </section>
