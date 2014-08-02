@@ -65,6 +65,11 @@
 </li>
 <li>
 <a href="#6.-the-application-homepage">6. The Application Homepage</a>
+<ul>
+<li>
+<a href="#6.1-mote">6.1 Mote</a>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -371,7 +376,41 @@ dinamically (e.g. a user&#39;s timeline), or parts of the HTML are repeated on e
 page (e.g. a navigation menu). Therefore we separate it into <em>views</em>, which are
 template files that gets converted to HTML and sent back to the browser.</p>
 
-<p>In this chapter, you&#39;ll learn how to render and organize views.</p>
+<p>In this chapter, you&#39;ll learn how to use <a href="https://github.com/soveran/mote">mote</a>,
+a minimal template engine to render views.</p>
+
+<h2 id="6.1-mote">6.1 Mote</h2>
+
+<p>Mote is a fast template engine that allows us to put Ruby code into any
+plain text document, like HTML. A very simple example is this:</p>
+
+<pre><code class="ruby">require &quot;mote&quot;
+
+template = Mote.parse(&quot;The value of pi is {{ Math::PI }}&quot;)
+template.call # =&gt; &quot;The value of pi is 3.141592653589793&quot;
+</code></pre>
+
+<p>Mote recognizes two tags to evaluate Ruby code: <code>%</code> and <code>{{}}</code>.
+The difference between them is that while the <code>%</code> tag only evaluates
+the code, the <code>{{}}</code> tag also prints the result to the template.</p>
+
+<p>The next example shows a list of different use cases you may face:</p>
+
+<pre><code class="ruby">% # This is a comment.
+% x = 2
+% y = 1
+
+&lt;p&gt;The value of x is {{ x }}&lt;/p&gt;
+&lt;p&gt;The value of y is {{ y }}&lt;/p&gt;
+&lt;p&gt;The sum of x and y is {{ x + y }}&lt;/p&gt;
+</code></pre>
+
+<p>Following the above example, the printed result will be:</p>
+
+<pre><code class="html">&lt;p&gt;The value of x is 2&lt;/p&gt;
+&lt;p&gt;The value of y is 1&lt;/p&gt;
+&lt;p&gt;The sum of x and y is 3&lt;/p&gt;
+</code></pre>
 
       </section>
     </section>
