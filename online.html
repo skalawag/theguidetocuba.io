@@ -67,7 +67,10 @@
 <a href="#6.-the-application-homepage">6. The Application Homepage</a>
 <ul>
 <li>
-<a href="#6.1-mote">6.1 Mote</a>
+<a href="#6.1.-mote">6.1. Mote</a>
+</li>
+<li>
+<a href="#6.2.-cuba-&-mote">6.2. Cuba &amp; Mote</a>
 </li>
 </ul>
 </li>
@@ -379,7 +382,7 @@ template files that gets converted to HTML and sent back to the browser.</p>
 <p>In this chapter, you&#39;ll learn how to use <a href="https://github.com/soveran/mote">mote</a>,
 a minimal template engine to render views.</p>
 
-<h2 id="6.1-mote">6.1 Mote</h2>
+<h2 id="6.1.-mote">6.1. Mote</h2>
 
 <p>Mote is a fast template engine that allows us to put Ruby code into any
 plain text document, like HTML.</p>
@@ -406,6 +409,39 @@ the code, the <code>{{}}</code> tag also prints the result to the template.</p>
   &lt;li&gt;mote&lt;/li&gt;
   &lt;li&gt;rack&lt;/li&gt;
 &lt;/ul&gt;
+</code></pre>
+
+<h2 id="6.2.-cuba-&amp;-mote">6.2. Cuba &amp; Mote</h2>
+
+<p>Use the <code>dep</code> command to install the <a href="https://github.com/soveran/mote">mote</a>
+and <a href="https://github.com/frodsan/mote-render">mote-render</a> gems.</p>
+
+<pre><code class="no-highlight">$ dep add mote
+$ dep add mote-render
+$ dep install
+</code></pre>
+
+<blockquote>
+<p>NOTE: Remember to install the gems inside of the shell session instantiated
+by gs. You can instantiate it by typing <code>gs</code> in your terminal.</p>
+</blockquote>
+
+<p>The <em>mote-render</em> gem includes a plugin called <code>Mote::Render</code>. This plugin
+tells Cuba where to look for template files and uses Mote to render them.</p>
+
+<p>To set up Mote in the application, change the code as shown below.</p>
+
+<pre><code class="ruby">require &quot;cuba&quot;
+require &quot;mote&quot;
+require &quot;mote/render&quot;
+
+Cuba.plugin(Mote::Render)
+
+Cuba.define do
+  on root do
+    res.write(&quot;Hello Frogger!&quot;)
+  end
+end
 </code></pre>
 
       </section>
