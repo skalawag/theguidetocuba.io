@@ -6,6 +6,6 @@ Cuba.plugin(Mote::Render)
 
 Cuba.define do
   on root do
-    render("home")
+    render("home", title: "Frogger")
   end
 end
