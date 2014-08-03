@@ -310,7 +310,7 @@ template files that gets converted to HTML and sent back to the browser.
 In this chapter, you'll learn how to use [mote](https://github.com/soveran/mote),
 a minimal template engine to render views.
 
-## 6.1 Mote
+## 6.1. Mote
 
 Mote is a fast template engine that allows us to put Ruby code into any
 plain text document, like HTML.
@@ -339,4 +339,37 @@ The generated result will be:
   <li>mote</li>
   <li>rack</li>
 </ul>
+```
+
+## 6.2. Cuba & Mote
+
+Use the `dep` command to install the [mote](https://github.com/soveran/mote)
+and [mote-render](https://github.com/frodsan/mote-render) gems.
+
+```no-highlight
+$ dep add mote
+$ dep add mote-render
+$ dep install
+```
+
+> NOTE: Remember to install the gems inside of the shell session instantiated
+by gs. You can instantiate it by typing `gs` in your terminal.
+
+The *mote-render* gem includes a plugin called `Mote::Render`. This plugin
+tells Cuba where to look for template files and uses Mote to render them.
+
+To set up Mote in the application, change the code as shown below.
+
+```ruby
+require "cuba"
+require "mote"
+require "mote/render"
+
+Cuba.plugin(Mote::Render)
+
+Cuba.define do
+  on root do
+    res.write("Hello Frogger!")
+  end
+end
 ```
