@@ -341,7 +341,7 @@ The generated result will be:
 </ul>
 ```
 
-## 6.2. Cuba & Mote
+## 6.2. Mote & Cuba
 
 Use the `dep` command to install the [mote](https://github.com/soveran/mote)
 and [mote-render](https://github.com/frodsan/mote-render) gems.
