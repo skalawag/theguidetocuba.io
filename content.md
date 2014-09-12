@@ -344,7 +344,7 @@ The generated result will be:
 ## 6.2. Mote & Cuba
 
 Use the `dep` command to install the [mote](https://github.com/soveran/mote)
-and [mote-render](https://github.com/frodsan/mote-render) gems.
+and [mote-render](https://github.com/harmoni-io/mote-render) gems.
 
 ```no-highlight
 $ dep add mote
