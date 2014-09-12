@@ -135,7 +135,7 @@ greeting message:
 
 ![hello](/img/book/hello.png)
 
-## 3.3. Breaking Down the Syntax
+## 4.3. Breaking Down the Syntax
 
 Now that you know how to build a minimal application, let's take a deeper
 look at the syntax.
@@ -170,7 +170,7 @@ When you enter <http://localhost:9292/>, the application checks if the
 accessed path is the root. Since this evaluates to `true`, it prints
 *"Hello Frogger!"*.
 
-## 3.4. Introduction to Rack
+## 4.4. Introduction to Rack
 
 As we mentioned earlier, Cuba is built on top of Rack ... but what is Rack?
 
