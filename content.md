@@ -265,7 +265,7 @@ This fetches the latest version of the gem and adds it to yours `.gems` file.
 Let's have a look at what the file looks like after adding the Cuba gem:
 
 ```no-highlight
-cuba -v 3.1.1
+cuba -v 3.3.0
 ```
 
 To install the listed gems in the `.gs` folder, do:
