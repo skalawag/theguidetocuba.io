@@ -67,9 +67,9 @@ must be executed in this directory.
 
 # 4. Up and Running
 
-This first chapter focuses on the bare minimum you need to know to work
-with Cuba. We'll learn some of the core concepts walking through the
-creation of the classical "Hello World" application.
+This first chapter focuses on the bare minimum you need to know to
+work with Cuba. We'll learn some of the core concepts and walk through
+the creation of the classical "Hello World" application.
 
 ## 4.1. What's Cuba?
 
