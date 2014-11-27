@@ -304,7 +304,7 @@ end
 ```
 
 This approach can get very messy, especially when you need to generate content
-dinamically (e.g. a user's timeline), or parts of the HTML are repeated on every
+dynamically (e.g. a user's timeline), or parts of the HTML are repeated on every
 page (e.g. a navigation menu). Therefore we separate it into *views*, which are
 template files that gets converted to HTML and sent back to the browser.
 
