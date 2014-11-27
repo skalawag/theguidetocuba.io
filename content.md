@@ -208,7 +208,7 @@ You can read more about Rack visiting their home page:
 
 # 5. Managing Dependencies
 
-In every web application, there are common tasks that you need to do
+In every web application, there are common tasks that you need to perform
 (e.g authenticate users or query a database). Libraries are useful for
 not reinventing the wheel, and in Ruby they are often referred to as
 *gems*.
