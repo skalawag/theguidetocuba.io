@@ -26,7 +26,7 @@ Here's a list of pages that uses Cuba for inspiration:
 
 # 2. Assumptions
 
-This book is intended for everyone who wants to get started with Cuba.
+This book is intended for anyone who wants to get started with Cuba.
 It's recommended to have some basic knowledge of the Ruby programming
 language. If this is the first time you hear about Ruby, we encourage
 you to take this tutorial to get up to speed: <http://tryruby.org/>.
