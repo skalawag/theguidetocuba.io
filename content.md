@@ -100,8 +100,8 @@ $ gem install cuba
 ```
 
 Now that Cuba is installed, it's easy to create an application. Open
-your text editor of preference and create a file called `app.rb` with
-the following code:
+your preferred text editor and create a file called `app.rb` with the
+following code:
 
 ```ruby
 require "cuba"
