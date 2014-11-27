@@ -253,7 +253,7 @@ Now that we created a gemset, you will use *dep* to keep track of the project
 dependencies.
 
 dep uses a `.gems` file to list the required gems with their version
-number. This file will be created automotically the first time you add a
+number. This file will be created automatically the first time you add a
 gem to the list.
 
 To add Cuba to this list, use:
