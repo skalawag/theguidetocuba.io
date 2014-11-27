@@ -28,8 +28,9 @@ Here's a list of pages that uses Cuba for inspiration:
 
 This book is intended for anyone who wants to get started with Cuba.
 It's recommended to have some basic knowledge of the Ruby programming
-language. If this is the first time you hear about Ruby, we encourage
-you to take this tutorial to get up to speed: <http://tryruby.org/>.
+language. If you're unfamiliar with Ruby, or would like a refresher,
+we encourage you to take this tutorial to get up to speed:
+<http://tryruby.org/>.
 
 In order to try out the examples of the book, you need to have some
 prerequisites installed:
