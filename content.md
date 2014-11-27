@@ -228,9 +228,9 @@ of each one. This is where tools like [gs](https://github.com/soveran/gs) and
 
 ## 5.1. gs
 
-With gs you can create a *gemset* for each project. A gemset is an isolated
-space to install gems. By providing each project with their own gemset, you
-can be sure that the right version of a gem is loaded.
+With gs you can create a *gemset* for each project. A gemset is an
+isolated space to install gems. By providing each project with its own
+gemset, you can be sure that the right version of a gem is loaded.
 
 To install gs, do:
 
