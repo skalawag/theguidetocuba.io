@@ -306,7 +306,7 @@ end
 This approach can get very messy, especially when you need to generate content
 dynamically (e.g. a user's timeline), or parts of the HTML are repeated on every
 page (e.g. a navigation menu). Therefore we separate it into *views*, which are
-template files that gets converted to HTML and sent back to the browser.
+template files that get converted to HTML and sent back to the browser.
 
 In this chapter, you'll learn how to use [mote](https://github.com/soveran/mote),
 a minimal template engine to render views.
